@@ -43,7 +43,10 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <span className="text-xl font-bold text-[#00D37F]">Prompt Theory</span>
+              <a href="#" className="text-xl font-bold text-[#00D37F]" onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}>Prompt Theory</a>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
