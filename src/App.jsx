@@ -85,7 +85,7 @@ const LandingPage = () => {
           </h1>
           
           <p className="text-xl text-[#9CA39C] mb-8 max-w-2xl mx-auto">
-            Stop losing meticulously crafted prompts to closed tabs and expired sessions. 
+            Stop losing meticulously crafted prompts to closed tabs, expired sessions, and scattered documents. 
             Professional prompt management for people who ship with AI.
           </p>
 
@@ -159,7 +159,7 @@ const LandingPage = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Instant Access Anywhere</h3>
-                <p className="text-[#9CA39C]">Cmd+Shift+P in any AI tool. Your entire library. 300ms.</p>
+                <p className="text-[#9CA39C]">Cmd+Shift+Space in any AI tool. Your entire library. 300ms.</p>
               </div>
             </div>
 
@@ -211,21 +211,21 @@ const LandingPage = () => {
           
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
+              <Shield className="text-[#00D37F] mb-4" size={24} />
+              <h3 className="font-semibold mb-2">Secure cloud storage</h3>
+              <p className="text-[#9CA39C] text-sm">Your prompts encrypted and backed up in the cloud</p>
+            </div>
+
+            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
               <Lock className="text-[#00D37F] mb-4" size={24} />
-              <h3 className="font-semibold mb-2">Local storage by default</h3>
-              <p className="text-[#9CA39C] text-sm">Your prompts never leave your device unless you enable sync</p>
+              <h3 className="font-semibold mb-2">End-to-end encryption</h3>
+              <p className="text-[#9CA39C] text-sm">Military-grade encryption for your intellectual property</p>
             </div>
 
             <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
               <Shield className="text-[#00D37F] mb-4" size={24} />
-              <h3 className="font-semibold mb-2">Optional encrypted sync</h3>
-              <p className="text-[#9CA39C] text-sm">End-to-end encryption when you choose to sync</p>
-            </div>
-
-            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
-              <Download className="text-[#00D37F] mb-4" size={24} />
-              <h3 className="font-semibold mb-2">Export anytime</h3>
-              <p className="text-[#9CA39C] text-sm">Your data is yours. Export to JSON whenever you want</p>
+              <h3 className="font-semibold mb-2">SOC 2 compliant</h3>
+              <p className="text-[#9CA39C] text-sm">Enterprise-grade security infrastructure</p>
             </div>
 
             <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
@@ -310,7 +310,7 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
-                  Local only
+                  Cloud sync
                 </li>
               </ul>
 
@@ -358,7 +358,7 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
-                  API access
+                  Priority support
                 </li>
               </ul>
 
@@ -489,7 +489,7 @@ const LandingPage = () => {
           </div>
 
           <div className="mt-8 pt-8 border-t border-[#1F2F1F] text-center text-sm text-[#9CA39C]">
-            © 2024 Prompt Theory. Built for developers, by developers.
+            © {new Date().getFullYear()} Prompt Theory. Built for builders, by builders.
           </div>
         </div>
       </footer>
