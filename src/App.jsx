@@ -83,13 +83,18 @@ const LandingPage = () => {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
-            Your AI Prompts Are Your
-            <span className="text-[#00D37F] block">Intellectual Property</span>
+            Stop Getting
+            <span className="text-[#00D37F] block">Mediocre AI Output</span>
           </h1>
           
           <p className="text-xl text-[#9CA39C] mb-8 max-w-2xl mx-auto">
-            Stop losing meticulously crafted prompts to closed tabs, expired sessions, and scattered documents. 
-            Professional prompt management for people who ship with AI.
+            You know AI can do better. You've seen it. But you can't remember 
+            the exact prompt that made it shine. Now you're back to trial and error. 
+            Every. Single. Time.
+          </p>
+
+          <p className="text-2xl font-semibold mb-8 text-[#E5E7E5]">
+            Time to build your prompt playbook.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -98,7 +103,7 @@ const LandingPage = () => {
               <ChevronRight className="ml-2" size={20} />
             </button>
             <button className="text-[#00D37F] border border-[#00D37F] px-8 py-3 rounded text-lg hover:bg-[#00D37F] hover:text-[#0A0F0A] transition">
-              See How It Works
+              Watch Demo
             </button>
           </div>
 
@@ -112,37 +117,42 @@ const LandingPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0F1A0F]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Every Technical Professional Has The Same Problem
+            The Difference Between Good and Great AI Output? <span className="text-[#00D37F]">Your Prompts.</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
               <h3 className="text-[#00D37F] font-semibold mb-4">ENGINEERS</h3>
               <ul className="space-y-2 text-[#9CA39C]">
-                <li>• Debugging complex systems</li>
-                <li>• Architecture decisions</li>
-                <li>• Code review templates</li>
-                <li>• Test generation patterns</li>
+                <li>• Debug complex systems in one shot</li>
+                <li>• Generate production-ready code</li>
+                <li>• Write comprehensive test suites</li>
+                <li>• Architect solutions that scale</li>
               </ul>
             </div>
 
             <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
               <h3 className="text-[#00D37F] font-semibold mb-4">DESIGNERS</h3>
               <ul className="space-y-2 text-[#9CA39C]">
-                <li>• Component variations</li>
-                <li>• Design system rules</li>
-                <li>• Prototype interactions</li>
-                <li>• Copy iterations</li>
+                <li>• Generate pixel-perfect components</li>
+                <li>• Create consistent design systems</li>
+                <li>• Prototype complex interactions</li>
+                <li>• Write compelling UX copy</li>
               </ul>
             </div>
           </div>
 
           <div className="text-center bg-[#0A0F0A] p-8 rounded border border-[#FFB347]">
-            <p className="text-2xl font-semibold mb-2">One browser crash. One session timeout.</p>
-            <p className="text-3xl text-[#FFB347]">Weeks of refined prompts - gone.</p>
+            <p className="text-2xl font-semibold mb-2">You've felt the difference:</p>
+            <p className="text-xl text-[#9CA39C] mb-4">
+              Generic AI response → Exactly what you needed<br />
+              Hours of iteration → Nailing it first try<br />
+              AI as a toy → AI as a force multiplier
+            </p>
+            <p className="text-3xl text-[#FFB347] font-bold">The secret? The right prompt.</p>
             <p className="mt-4 text-[#9CA39C]">
-              Technical professionals lose <span className="text-[#E5E7E5] font-bold">52 minutes per week</span> recreating lost prompts.
-              <br />That's <span className="text-[#FFB347] font-bold">$4,500+ in lost productivity</span> per year.
+              But that game-changing prompt from last week? 
+              <span className="text-[#E5E7E5] font-bold"> Gone.</span>
             </p>
           </div>
         </div>
@@ -152,7 +162,7 @@ const LandingPage = () => {
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Built for How Technical Professionals Actually Work
+            Your Prompts Are the Key to <span className="text-[#00D37F]">10x AI Performance</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -421,19 +431,19 @@ const LandingPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Your Best Prompts Deserve Better Than Copy-Paste
+            The Secret to Consistently Great AI Results
           </h2>
           
           <p className="text-xl text-[#9CA39C] mb-8">
-            You're a professional. Your tools should be too.
+            Great prompts aren't lucky accidents. They're engineered.
           </p>
 
           <button className="bg-[#00D37F] text-[#0A0F0A] px-8 py-4 rounded text-lg font-semibold hover:bg-[#00A865] transition inline-flex items-center">
             <Clock className="mr-2" size={20} />
-            Install Prompt Theory
+            Get Prompt Theory
           </button>
           
-          <p className="mt-4 text-sm text-[#9CA39C]">30 seconds to better AI workflow</p>
+          <p className="mt-4 text-sm text-[#9CA39C]">Start engineering better AI output</p>
 
           <div className="flex justify-center space-x-8 mt-8 text-sm">
             <div className="flex items-center">
