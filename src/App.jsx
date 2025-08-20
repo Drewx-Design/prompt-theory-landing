@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronRight, Shield, Zap, GitBranch, Search, Download, Lock, Clock, CheckCircle, Menu, X } from 'lucide-react';
 
 const LandingPage = () => {
@@ -472,7 +473,7 @@ const LandingPage = () => {
                 Professional prompt management for people who ship with AI.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-[#9CA39C] hover:text-[#E5E7E5]">Privacy Policy</a>
+                <Link to="/privacy" className="text-[#9CA39C] hover:text-[#E5E7E5]">Privacy Policy</Link>
                 <a href="#" className="text-[#9CA39C] hover:text-[#E5E7E5]">Terms</a>
                 <a href="#" className="text-[#9CA39C] hover:text-[#E5E7E5]">Contact</a>
               </div>
