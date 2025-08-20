@@ -185,8 +185,8 @@ const PrivacyPolicy = () => {
             
             <div className="bg-[#0F1A0F] p-6 rounded border border-[#1F2F1F]">
               <ul className="space-y-2 text-[#9CA39C]">
-                <li><strong className="text-[#E5E7E5]">Support:</strong> GitHub Issues (primary)</li>
-                <li><strong className="text-[#E5E7E5]">Email:</strong> privacy@prompttheory.com</li>
+                <li><strong className="text-[#E5E7E5]">Email:</strong> privacy@prompttheory.dev</li>
+                <li><strong className="text-[#E5E7E5]">Support:</strong> support@prompttheory.dev</li>
                 <li><strong className="text-[#E5E7E5]">Response time:</strong> Within 72 hours</li>
               </ul>
             </div>

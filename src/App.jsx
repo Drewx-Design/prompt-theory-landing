@@ -108,6 +108,14 @@ const LandingPage = () => {
             </button>
           </div>
 
+          <div className="mt-12">
+            <img 
+              src="/images/promotional-small-440x280.png" 
+              alt="Prompt Theory Extension Preview" 
+              className="mx-auto rounded-lg border border-[#1F2F1F] shadow-lg max-w-md"
+            />
+          </div>
+
           <p className="mt-8 text-sm text-[#9CA39C]">
             Trusted by 1,000+ engineers, designers, and technical professionals
           </p>
@@ -208,10 +216,72 @@ const LandingPage = () => {
             </div>
           </div>
 
-          {/* Screenshot placeholder */}
-          <div className="mt-16 bg-[#0F1A0F] p-8 rounded border border-[#1F2F1F] text-center">
-            <div className="bg-[#0A0F0A] h-96 rounded flex items-center justify-center">
-              <p className="text-[#9CA39C]">[Extension Screenshot]</p>
+          {/* Screenshot Gallery */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-center mb-8">See Prompt Theory in Action</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+                <img 
+                  src="/images/screenshot-1-organization.png" 
+                  alt="Organize your prompts by project and workflow" 
+                  className="w-full rounded mb-3"
+                />
+                <h4 className="font-semibold text-[#00D37F] mb-2">Organized by Project</h4>
+                <p className="text-[#9CA39C] text-sm">Keep prompts structured exactly how you work - by project, workflow, or any system that makes sense to you.</p>
+              </div>
+              
+              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+                <img 
+                  src="/images/screenshot-2-your-prompts.png" 
+                  alt="Your complete prompt library at a glance" 
+                  className="w-full rounded mb-3"
+                />
+                <h4 className="font-semibold text-[#00D37F] mb-2">Your Prompt Library</h4>
+                <p className="text-[#9CA39C] text-sm">Browse your entire collection of prompts with tags, version history, and quick search capabilities.</p>
+              </div>
+              
+              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+                <img 
+                  src="/images/screenshot-3-quickcopy.png" 
+                  alt="Quick copy functionality" 
+                  className="w-full rounded mb-3"
+                />
+                <h4 className="font-semibold text-[#00D37F] mb-2">One-Click Copy</h4>
+                <p className="text-[#9CA39C] text-sm">Copy prompts to your clipboard instantly. No more hunting through old conversations or notes.</p>
+              </div>
+              
+              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+                <img 
+                  src="/images/screenshot-4-newprompt.png" 
+                  alt="Create and save new prompts easily" 
+                  className="w-full rounded mb-3"
+                />
+                <h4 className="font-semibold text-[#00D37F] mb-2">Save New Prompts</h4>
+                <p className="text-[#9CA39C] text-sm">Capture that perfect prompt the moment you create it. Add tags, notes, and organize for future use.</p>
+              </div>
+              
+              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+                <img 
+                  src="/images/screenshot-5-settings.svg" 
+                  alt="Customizable settings and preferences" 
+                  className="w-full rounded mb-3"
+                />
+                <h4 className="font-semibold text-[#00D37F] mb-2">Customizable</h4>
+                <p className="text-[#9CA39C] text-sm">Configure hotkeys, sync preferences, and make the extension work exactly how you want it to.</p>
+              </div>
+              
+              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F] flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#00D37F] rounded-full flex items-center justify-center mx-auto mb-3">
+                    <ChevronRight className="text-[#0A0F0A]" size={24} />
+                  </div>
+                  <h4 className="font-semibold text-[#00D37F] mb-2">Ready to Start?</h4>
+                  <p className="text-[#9CA39C] text-sm mb-4">Install the free extension and build your prompt playbook today.</p>
+                  <button className="bg-[#00D37F] text-[#0A0F0A] px-4 py-2 rounded text-sm font-semibold hover:bg-[#00A865] transition">
+                    Install Now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

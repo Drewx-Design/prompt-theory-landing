@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Placeholder - Organization View</title>
+    <style>
+        body {
+            margin: 0;
+            width: 1280px;
+            height: 800px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px;
+            max-width: 700px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .feature-desc {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📁 Smart Organization</h1>
+        <div class="subtitle">Projects, Tags, and Collections</div>
+        
+        <div class="grid">
+            <div class="feature-card">
+                <div class="icon">📁</div>
+                <div class="feature-title">Projects</div>
+                <div class="feature-desc">Group prompts by project context</div>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🏷️</div>
+                <div class="feature-title">Smart Tags</div>
+                <div class="feature-desc">Auto-complete and filter by tags</div>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⭐</div>
+                <div class="feature-title">Collections</div>
+                <div class="feature-desc">Pinned, Recent, Templates</div>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔍</div>
+                <div class="feature-title">Search</div>
+                <div class="feature-desc">Find any prompt in milliseconds</div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="position: absolute; bottom: 20px; font-size: 14px; opacity: 0.7;">
+        Screenshot Placeholder - 1280x800 Chrome Web Store Format
+    </div>
+</body>
+</html>
