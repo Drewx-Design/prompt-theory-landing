@@ -350,30 +350,30 @@ const LandingPage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Shield className="text-[#0066FF] mx-auto mb-6" size={48} />
           <h2 className="text-3xl sm:text-4xl font-bold mb-12">Your Prompts. Your Control.</h2>
-          
+
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
               <Shield className="text-[#0066FF] mb-4" size={24} />
-              <h3 className="font-semibold mb-2">Secure cloud storage</h3>
-              <p className="text-[#6B7280] text-sm">Your prompts encrypted and backed up in the cloud</p>
+              <h3 className="font-semibold mb-2">Your prompts stay yours</h3>
+              <p className="text-[#6B7280] text-sm">Complete ownership and control over your prompt library</p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
               <Lock className="text-[#0066FF] mb-4" size={24} />
-              <h3 className="font-semibold mb-2">End-to-end encryption</h3>
-              <p className="text-[#6B7280] text-sm">Military-grade encryption for your intellectual property</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <Shield className="text-[#0066FF] mb-4" size={24} />
-              <h3 className="font-semibold mb-2">SOC 2 compliant</h3>
-              <p className="text-[#6B7280] text-sm">Enterprise-grade security infrastructure</p>
+              <h3 className="font-semibold mb-2">Delete anything anytime</h3>
+              <p className="text-[#6B7280] text-sm">Full control to remove any prompt or data whenever you want</p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
               <CheckCircle className="text-[#0066FF] mb-4" size={24} />
-              <h3 className="font-semibold mb-2">We can't read your prompts</h3>
-              <p className="text-[#6B7280] text-sm">Zero-knowledge architecture. Your privacy guaranteed</p>
+              <h3 className="font-semibold mb-2">No selling your data</h3>
+              <p className="text-[#6B7280] text-sm">We make money from subscriptions, not from your information</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <Download className="text-[#0066FF] mb-4" size={24} />
+              <h3 className="font-semibold mb-2">Simple, transparent storage</h3>
+              <p className="text-[#6B7280] text-sm">Clear data practices with no hidden complexity or fine print</p>
             </div>
           </div>
         </div>
@@ -413,7 +413,7 @@ const LandingPage = () => {
               </div>
               <div>
                 <CheckCircle className="text-[#0066FF] mx-auto mb-2" size={24} />
-                <p>Early adopter pricing locked in forever</p>
+                <p>First access to new features</p>
               </div>
             </div>
           </div>
@@ -429,50 +429,15 @@ const LandingPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Free Tier */}
-            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <h3 className="text-2xl font-bold mb-2">FREE</h3>
-              <p className="text-[#6B7280] mb-6">Forever</p>
-              
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  50 prompts
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  3 projects
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  Basic search
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  7-day history
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  Cloud sync
-                </li>
-              </ul>
-
-              <button className="w-full bg-white text-[#0066FF] border-2 border-[#0066FF] py-3 rounded-md font-semibold hover:bg-[#0066FF] hover:text-white transition-all duration-200">
-                Start Free
-              </button>
-            </div>
-
-            {/* Pro Tier */}
-            <div className="bg-white p-8 rounded-lg border-2 border-[#0066FF] shadow-[0_4px_6px_rgba(0,102,255,0.1)] relative">
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#0066FF] text-white px-4 py-1 rounded text-sm font-semibold">
                 MOST POPULAR
               </div>
-              
-              <h3 className="text-2xl font-bold mb-2">PRO</h3>
-              <p className="text-[#6B7280] mb-6">
-                $19/month
-                <span className="block text-sm">$190/year</span>
-              </p>
-              
+
+              <h3 className="text-2xl font-bold mb-2">FREE</h3>
+              <p className="text-[#6B7280] mb-2">Forever</p>
+              <p className="text-sm text-[#6B7280] italic mb-6">*(because it's the only one that exists)*</p>
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
@@ -484,6 +449,40 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
+                  Basic search
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
+                  30-day history
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
+                  Cloud sync
+                </li>
+              </ul>
+
+              <a
+                href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-[#0066FF] text-white py-3 rounded-md font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200 text-center"
+              >
+                Start Free
+              </a>
+            </div>
+
+            {/* Pro Tier */}
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <h3 className="text-2xl font-bold mb-2">PRO</h3>
+              <p className="text-[#6B7280] italic mb-6">*Coming Soon™*</p>
+
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
+                  Everything in Free
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Advanced search
                 </li>
                 <li className="flex items-center">
@@ -492,11 +491,7 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  Cloud sync
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  All AI platforms
+                  AI prompt optimization
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
@@ -504,19 +499,16 @@ const LandingPage = () => {
                 </li>
               </ul>
 
-              <button className="w-full bg-[#0066FF] text-white py-3 rounded-md font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200">
-                Start Free Trial
+              <button className="w-full bg-white text-[#0066FF] border-2 border-[#0066FF] py-3 rounded-md font-semibold hover:bg-[#0066FF] hover:text-white transition-all duration-200">
+                Join Waitlist
               </button>
             </div>
 
             {/* Team Tier */}
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
               <h3 className="text-2xl font-bold mb-2">TEAM</h3>
-              <p className="text-[#6B7280] mb-6">
-                $39/user/month
-                <span className="block text-sm">$390/user/year</span>
-              </p>
-              
+              <p className="text-[#6B7280] italic mb-6">*Coming Later*</p>
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
@@ -524,7 +516,7 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  Shared workspace
+                  Shared workspaces
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
@@ -538,18 +530,10 @@ const LandingPage = () => {
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   SSO integration
                 </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  Priority support
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
-                  Custom integrations
-                </li>
               </ul>
 
-              <button className="w-full bg-white text-[#0066FF] border-2 border-[#0066FF] py-3 rounded-md font-semibold hover:bg-[#0066FF] hover:text-white transition-all duration-200">
-                Contact Sales
+              <button className="w-full bg-gray-100 text-[#6B7280] border border-gray-200 py-3 rounded-md font-semibold hover:bg-gray-200 transition-all duration-200">
+                Get Notified
               </button>
             </div>
           </div>
