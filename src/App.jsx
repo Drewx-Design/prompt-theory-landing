@@ -38,25 +38,30 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0F0A] text-[#E5E7E5] font-mono">
+    <div className="min-h-screen bg-white text-[#1A1A1A] font-mono">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-[#0A0F0A]/90 backdrop-blur-md border-b border-[#1F2F1F] z-50">
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-[#F5F5F5] z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="#" className="text-xl font-bold text-[#00D37F]" onClick={(e) => {
+              <a href="#" className="text-xl font-bold text-[#0066FF]" onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}>Prompt Theory</a>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-[#9CA39C] hover:text-[#E5E7E5] transition">Features</a>
-              <a href="#security" className="text-[#9CA39C] hover:text-[#E5E7E5] transition">Security</a>
-              <a href="#pricing" className="text-[#9CA39C] hover:text-[#E5E7E5] transition">Pricing</a>
-              <button className="bg-[#00D37F] text-[#0A0F0A] px-4 py-2 rounded hover:bg-[#00A865] transition">
+              <a href="#features" className="text-[#6B7280] hover:text-[#1A1A1A] transition">Features</a>
+              <a href="#security" className="text-[#6B7280] hover:text-[#1A1A1A] transition">Security</a>
+              <a href="#pricing" className="text-[#6B7280] hover:text-[#1A1A1A] transition">Pricing</a>
+              <a
+                href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#0066FF] text-white px-4 py-2 rounded-md shadow-sm hover:bg-[#0052CC] hover:shadow-md transition-all duration-200"
+              >
                 Install Free Extension
-              </button>
+              </a>
             </div>
 
             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -67,72 +72,104 @@ const LandingPage = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-[#0F1A0F] border-b border-[#1F2F1F]">
+          <div className="md:hidden bg-white border-b border-[#F5F5F5]">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#features" className="block px-3 py-2 text-[#9CA39C] hover:text-[#E5E7E5]">Features</a>
-              <a href="#security" className="block px-3 py-2 text-[#9CA39C] hover:text-[#E5E7E5]">Security</a>
-              <a href="#pricing" className="block px-3 py-2 text-[#9CA39C] hover:text-[#E5E7E5]">Pricing</a>
-              <button className="w-full text-left bg-[#00D37F] text-[#0A0F0A] px-3 py-2 rounded hover:bg-[#00A865] transition">
+              <a href="#features" className="block px-3 py-2 text-[#6B7280] hover:text-[#1A1A1A]">Features</a>
+              <a href="#security" className="block px-3 py-2 text-[#6B7280] hover:text-[#1A1A1A]">Security</a>
+              <a href="#pricing" className="block px-3 py-2 text-[#6B7280] hover:text-[#1A1A1A]">Pricing</a>
+              <a
+                href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-left bg-[#0066FF] text-white px-3 py-2 rounded-md shadow-sm hover:bg-[#0052CC] hover:shadow-md transition-all duration-200"
+              >
                 Install Free Extension
-              </button>
+              </a>
             </div>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#F5F5F5] to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
-            Stop Getting
-            <span className="text-[#00D37F] block">Mediocre AI Output</span>
+            Your Prompts.
+            <span className="text-[#0066FF] block">Your Advantage.</span>
           </h1>
-          
-          <p className="text-xl text-[#9CA39C] mb-8 max-w-2xl mx-auto">
-            You know AI can do better. You've seen it. But you can't remember 
-            the exact prompt that made it shine. Now you're back to trial and error. 
-            Every. Single. Time.
-          </p>
 
-          <p className="text-2xl font-semibold mb-8 text-[#E5E7E5]">
-            Time to build your prompt playbook.
+          <p className="text-xl text-[#6B7280] mb-8 max-w-2xl mx-auto">
+            The people who know how to get the outcomes from these tools are the ones that are gonna make the things that win. Time to become one of them.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-[#00D37F] text-[#0A0F0A] px-8 py-3 rounded text-lg font-semibold hover:bg-[#00A865] transition flex items-center">
-              Install Free Extension
+            <a
+              href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-[#0066FF] text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
+            >
+              Install Free Extension - Early Access
               <ChevronRight className="ml-2" size={20} />
-            </button>
-            <button className="text-[#00D37F] border border-[#00D37F] px-8 py-3 rounded text-lg hover:bg-[#00D37F] hover:text-[#0A0F0A] transition">
-              Watch Demo
-            </button>
+            </a>
           </div>
+
+          <p className="mt-6 text-lg font-semibold text-[#1A1A1A]">
+            🚀 Just launched. Join the first builders.
+          </p>
 
           <div className="mt-12">
             <img 
               src="/images/promotional-small-440x280.png" 
               alt="Prompt Theory Extension Preview" 
-              className="mx-auto rounded-lg border border-[#1F2F1F] shadow-lg max-w-md"
+              className="mx-auto rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] max-w-md"
             />
           </div>
 
-          <p className="mt-8 text-sm text-[#9CA39C]">
-            Trusted by 1,000+ engineers, designers, and technical professionals
-          </p>
+          <div className="mt-12 bg-white p-8 rounded-lg shadow-[0_4px_6px_rgba(0,0,0,0.07)] max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center text-[#1A1A1A]">Why Prompt Theory?</h3>
+
+            <div className="text-center mb-6">
+              <p className="text-lg italic text-[#6B7280] mb-4">
+                "I got tired of losing my best ChatGPT prompts. So I built this. Now I ship 3x faster. You should too."
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="w-12 h-12 bg-[#0066FF] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-white font-bold">🔨</span>
+                </div>
+                <p className="text-sm text-[#6B7280]">Built by a builder who uses AI daily</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-[#0066FF] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-white font-bold">🎯</span>
+                </div>
+                <p className="text-sm text-[#6B7280]">Focused on one thing: making you dangerous with AI</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-[#0066FF] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-white font-bold">💬</span>
+                </div>
+                <p className="text-sm text-[#6B7280]">Your feature requests considered (I actually read them)</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0F1A0F]">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            The Difference Between Good and Great AI Output? <span className="text-[#00D37F]">Your Prompts.</span>
+            The Difference Between Good and Great AI Output? <span className="text-[#0066FF]">Your Prompts.</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
-              <h3 className="text-[#00D37F] font-semibold mb-4">ENGINEERS</h3>
-              <ul className="space-y-2 text-[#9CA39C]">
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <h3 className="text-[#0066FF] font-semibold mb-4">ENGINEERS</h3>
+              <ul className="space-y-2 text-[#6B7280]">
                 <li>• Debug complex systems in one shot</li>
                 <li>• Generate production-ready code</li>
                 <li>• Write comprehensive test suites</li>
@@ -140,9 +177,9 @@ const LandingPage = () => {
               </ul>
             </div>
 
-            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
-              <h3 className="text-[#00D37F] font-semibold mb-4">DESIGNERS</h3>
-              <ul className="space-y-2 text-[#9CA39C]">
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <h3 className="text-[#0066FF] font-semibold mb-4">DESIGNERS</h3>
+              <ul className="space-y-2 text-[#6B7280]">
                 <li>• Generate pixel-perfect components</li>
                 <li>• Create consistent design systems</li>
                 <li>• Prototype complex interactions</li>
@@ -151,67 +188,67 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="text-center bg-[#0A0F0A] p-8 rounded border border-[#FFB347]">
+          <div className="text-center bg-white p-8 rounded-lg border-2 border-[#6B46C1] shadow-[0_4px_6px_rgba(107,70,193,0.1)]">
             <p className="text-2xl font-semibold mb-2">You've felt the difference:</p>
-            <p className="text-xl text-[#9CA39C] mb-4">
+            <p className="text-xl text-[#6B7280] mb-4">
               Generic AI response → Exactly what you needed<br />
               Hours of iteration → Nailing it first try<br />
               AI as a toy → AI as a force multiplier
             </p>
-            <p className="text-3xl text-[#FFB347] font-bold">The secret? The right prompt.</p>
-            <p className="mt-4 text-[#9CA39C]">
-              But that game-changing prompt from last week? 
-              <span className="text-[#E5E7E5] font-bold"> Gone.</span>
+            <p className="text-3xl text-[#6B46C1] font-bold">The secret? The right prompt.</p>
+            <p className="mt-4 text-[#6B7280]">
+              But that game-changing prompt from last week?
+              <span className="text-[#1A1A1A] font-bold"> Gone.</span>
             </p>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Your Prompts Are the Key to <span className="text-[#00D37F]">10x AI Performance</span>
+            Your Prompts Are the Key to <span className="text-[#0066FF]">10x AI Performance</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <Zap className="text-[#00D37F]" size={24} />
+                <Zap className="text-[#0066FF]" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Instant Access Anywhere</h3>
-                <p className="text-[#9CA39C]">Cmd+Shift+Space in any AI tool. Your entire library. 300ms.</p>
+                <p className="text-[#6B7280]">Cmd+Shift+Space in any AI tool. Your entire library. 300ms.</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <GitBranch className="text-[#00D37F]" size={24} />
+                <GitBranch className="text-[#0066FF]" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Version Everything</h3>
-                <p className="text-[#9CA39C]">Track what worked. Compare outputs. Build on success.</p>
+                <p className="text-[#6B7280]">Track what worked. Compare outputs. Build on success.</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <Search className="text-[#00D37F]" size={24} />
+                <Search className="text-[#0066FF]" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Organize by Project & Workflow</h3>
-                <p className="text-[#9CA39C]">Frontend. Backend. Design system. Data pipeline. Structure it how you work.</p>
+                <p className="text-[#6B7280]">Frontend. Backend. Design system. Data pipeline. Structure it how you work.</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <Download className="text-[#00D37F]" size={24} />
+                <Download className="text-[#0066FF]" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Share With Your Team</h3>
-                <p className="text-[#9CA39C]">Stop asking "what prompt did you use?" Build collective intelligence.</p>
+                <p className="text-[#6B7280]">Stop asking "what prompt did you use?" Build collective intelligence.</p>
               </div>
             </div>
           </div>
@@ -220,66 +257,71 @@ const LandingPage = () => {
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-center mb-8">See Prompt Theory in Action</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
                 <img 
                   src="/images/screenshot-1-organization.png" 
                   alt="Organize your prompts by project and workflow" 
-                  className="w-full rounded mb-3"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
                 />
-                <h4 className="font-semibold text-[#00D37F] mb-2">Organized by Project</h4>
-                <p className="text-[#9CA39C] text-sm">Keep prompts structured exactly how you work - by project, workflow, or any system that makes sense to you.</p>
+                <h4 className="font-semibold text-[#0066FF] mb-2">Organized by Project</h4>
+                <p className="text-[#6B7280] text-sm">Keep prompts structured exactly how you work - by project, workflow, or any system that makes sense to you.</p>
               </div>
               
-              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
                 <img 
                   src="/images/screenshot-2-your-prompts.png" 
                   alt="Your complete prompt library at a glance" 
-                  className="w-full rounded mb-3"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
                 />
-                <h4 className="font-semibold text-[#00D37F] mb-2">Your Prompt Library</h4>
-                <p className="text-[#9CA39C] text-sm">Browse your entire collection of prompts with tags, version history, and quick search capabilities.</p>
+                <h4 className="font-semibold text-[#0066FF] mb-2">Your Prompt Library</h4>
+                <p className="text-[#6B7280] text-sm">Browse your entire collection of prompts with tags, version history, and quick search capabilities.</p>
               </div>
               
-              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
                 <img 
                   src="/images/screenshot-3-quickcopy.png" 
                   alt="Quick copy functionality" 
-                  className="w-full rounded mb-3"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
                 />
-                <h4 className="font-semibold text-[#00D37F] mb-2">One-Click Copy</h4>
-                <p className="text-[#9CA39C] text-sm">Copy prompts to your clipboard instantly. No more hunting through old conversations or notes.</p>
+                <h4 className="font-semibold text-[#0066FF] mb-2">One-Click Copy</h4>
+                <p className="text-[#6B7280] text-sm">Copy prompts to your clipboard instantly. No more hunting through old conversations or notes.</p>
               </div>
               
-              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
                 <img 
                   src="/images/screenshot-4-newprompt.png" 
                   alt="Create and save new prompts easily" 
-                  className="w-full rounded mb-3"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
                 />
-                <h4 className="font-semibold text-[#00D37F] mb-2">Save New Prompts</h4>
-                <p className="text-[#9CA39C] text-sm">Capture that perfect prompt the moment you create it. Add tags, notes, and organize for future use.</p>
+                <h4 className="font-semibold text-[#0066FF] mb-2">Save New Prompts</h4>
+                <p className="text-[#6B7280] text-sm">Capture that perfect prompt the moment you create it. Add tags, notes, and organize for future use.</p>
               </div>
               
-              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F]">
+              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
                 <img 
                   src="/images/screenshot-5-settings.svg" 
                   alt="Customizable settings and preferences" 
-                  className="w-full rounded mb-3"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
                 />
-                <h4 className="font-semibold text-[#00D37F] mb-2">Customizable</h4>
-                <p className="text-[#9CA39C] text-sm">Configure hotkeys, sync preferences, and make the extension work exactly how you want it to.</p>
+                <h4 className="font-semibold text-[#0066FF] mb-2">Customizable</h4>
+                <p className="text-[#6B7280] text-sm">Configure hotkeys, sync preferences, and make the extension work exactly how you want it to.</p>
               </div>
               
-              <div className="bg-[#0F1A0F] p-4 rounded border border-[#1F2F1F] flex items-center justify-center">
+              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-[#00D37F] rounded-full flex items-center justify-center mx-auto mb-3">
-                    <ChevronRight className="text-[#0A0F0A]" size={24} />
+                  <div className="w-16 h-16 bg-[#0066FF] rounded-full flex items-center justify-center mx-auto mb-3">
+                    <ChevronRight className="text-white" size={24} />
                   </div>
-                  <h4 className="font-semibold text-[#00D37F] mb-2">Ready to Start?</h4>
-                  <p className="text-[#9CA39C] text-sm mb-4">Install the free extension and build your prompt playbook today.</p>
-                  <button className="bg-[#00D37F] text-[#0A0F0A] px-4 py-2 rounded text-sm font-semibold hover:bg-[#00A865] transition">
+                  <h4 className="font-semibold text-[#0066FF] mb-2">Ready to Start?</h4>
+                  <p className="text-[#6B7280] text-sm mb-4">Install the free extension and build your prompt playbook today.</p>
+                  <a
+                    href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#0066FF] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
+                  >
                     Install Now
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -288,74 +330,74 @@ const LandingPage = () => {
       </section>
 
       {/* Security Section */}
-      <section id="security" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0F1A0F]">
+      <section id="security" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
         <div className="max-w-4xl mx-auto text-center">
-          <Shield className="text-[#00D37F] mx-auto mb-6" size={48} />
+          <Shield className="text-[#0066FF] mx-auto mb-6" size={48} />
           <h2 className="text-3xl sm:text-4xl font-bold mb-12">Your Prompts. Your Control.</h2>
           
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
-              <Shield className="text-[#00D37F] mb-4" size={24} />
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <Shield className="text-[#0066FF] mb-4" size={24} />
               <h3 className="font-semibold mb-2">Secure cloud storage</h3>
-              <p className="text-[#9CA39C] text-sm">Your prompts encrypted and backed up in the cloud</p>
+              <p className="text-[#6B7280] text-sm">Your prompts encrypted and backed up in the cloud</p>
             </div>
 
-            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
-              <Lock className="text-[#00D37F] mb-4" size={24} />
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <Lock className="text-[#0066FF] mb-4" size={24} />
               <h3 className="font-semibold mb-2">End-to-end encryption</h3>
-              <p className="text-[#9CA39C] text-sm">Military-grade encryption for your intellectual property</p>
+              <p className="text-[#6B7280] text-sm">Military-grade encryption for your intellectual property</p>
             </div>
 
-            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
-              <Shield className="text-[#00D37F] mb-4" size={24} />
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <Shield className="text-[#0066FF] mb-4" size={24} />
               <h3 className="font-semibold mb-2">SOC 2 compliant</h3>
-              <p className="text-[#9CA39C] text-sm">Enterprise-grade security infrastructure</p>
+              <p className="text-[#6B7280] text-sm">Enterprise-grade security infrastructure</p>
             </div>
 
-            <div className="bg-[#0A0F0A] p-6 rounded border border-[#1F2F1F]">
-              <CheckCircle className="text-[#00D37F] mb-4" size={24} />
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <CheckCircle className="text-[#0066FF] mb-4" size={24} />
               <h3 className="font-semibold mb-2">We can't read your prompts</h3>
-              <p className="text-[#9CA39C] text-sm">Zero-knowledge architecture. Your privacy guaranteed</p>
+              <p className="text-[#6B7280] text-sm">Zero-knowledge architecture. Your privacy guaranteed</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Beta Benefits */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-[#00D37F]/10 to-[#00A865]/10 p-8 rounded border border-[#00D37F]">
-            <h2 className="text-3xl font-bold mb-6 text-center">Early Access Benefits</h2>
+          <div className="bg-gradient-to-r from-[#0066FF]/10 to-[#6B46C1]/10 p-8 rounded-lg border-2 border-[#0066FF] shadow-[0_4px_6px_rgba(0,102,255,0.1)]">
+            <h2 className="text-3xl font-bold mb-6 text-center">First 100 users get:</h2>
             
             <div className="flex justify-center mb-6">
               <div className="flex space-x-6 text-2xl">
                 <div className="text-center">
-                  <div className="text-[#00D37F] font-bold">{timeLeft.days}</div>
-                  <div className="text-sm text-[#9CA39C]">days</div>
+                  <div className="text-[#0066FF] font-bold">{timeLeft.days}</div>
+                  <div className="text-sm text-[#6B7280]">days</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-[#00D37F] font-bold">{timeLeft.hours}</div>
-                  <div className="text-sm text-[#9CA39C]">hours</div>
+                  <div className="text-[#0066FF] font-bold">{timeLeft.hours}</div>
+                  <div className="text-sm text-[#6B7280]">hours</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-[#00D37F] font-bold">{timeLeft.minutes}</div>
-                  <div className="text-sm text-[#9CA39C]">mins</div>
+                  <div className="text-[#0066FF] font-bold">{timeLeft.minutes}</div>
+                  <div className="text-sm text-[#6B7280]">mins</div>
                 </div>
               </div>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-4 text-center">
               <div>
-                <CheckCircle className="text-[#00D37F] mx-auto mb-2" size={24} />
-                <p>Direct founder access</p>
+                <CheckCircle className="text-[#0066FF] mx-auto mb-2" size={24} />
+                <p>Direct line to the founder (me)</p>
               </div>
               <div>
-                <CheckCircle className="text-[#00D37F] mx-auto mb-2" size={24} />
-                <p>Shape the roadmap</p>
+                <CheckCircle className="text-[#0066FF] mx-auto mb-2" size={24} />
+                <p>Input on the roadmap - I build what helps you ship</p>
               </div>
               <div>
-                <CheckCircle className="text-[#00D37F] mx-auto mb-2" size={24} />
-                <p>Priority support</p>
+                <CheckCircle className="text-[#0066FF] mx-auto mb-2" size={24} />
+                <p>Early adopter pricing locked in forever</p>
               </div>
             </div>
           </div>
@@ -363,7 +405,7 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0F1A0F]">
+      <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
             Pricing for Professionals Who Ship
@@ -371,126 +413,126 @@ const LandingPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Free Tier */}
-            <div className="bg-[#0A0F0A] p-8 rounded border border-[#1F2F1F]">
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
               <h3 className="text-2xl font-bold mb-2">FREE</h3>
-              <p className="text-[#9CA39C] mb-6">Forever</p>
+              <p className="text-[#6B7280] mb-6">Forever</p>
               
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   50 prompts
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   3 projects
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Basic search
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   7-day history
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Cloud sync
                 </li>
               </ul>
 
-              <button className="w-full border border-[#00D37F] text-[#00D37F] py-3 rounded hover:bg-[#00D37F] hover:text-[#0A0F0A] transition">
+              <button className="w-full bg-white text-[#0066FF] border-2 border-[#0066FF] py-3 rounded-md font-semibold hover:bg-[#0066FF] hover:text-white transition-all duration-200">
                 Start Free
               </button>
             </div>
 
             {/* Pro Tier */}
-            <div className="bg-[#0A0F0A] p-8 rounded border-2 border-[#00D37F] relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#00D37F] text-[#0A0F0A] px-4 py-1 rounded text-sm font-semibold">
+            <div className="bg-white p-8 rounded-lg border-2 border-[#0066FF] shadow-[0_4px_6px_rgba(0,102,255,0.1)] relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#0066FF] text-white px-4 py-1 rounded text-sm font-semibold">
                 MOST POPULAR
               </div>
               
               <h3 className="text-2xl font-bold mb-2">PRO</h3>
-              <p className="text-[#9CA39C] mb-6">
+              <p className="text-[#6B7280] mb-6">
                 $19/month
                 <span className="block text-sm">$190/year</span>
               </p>
               
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Unlimited prompts
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Unlimited projects
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Advanced search
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Unlimited history
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Cloud sync
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   All AI platforms
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Priority support
                 </li>
               </ul>
 
-              <button className="w-full bg-[#00D37F] text-[#0A0F0A] py-3 rounded font-semibold hover:bg-[#00A865] transition">
+              <button className="w-full bg-[#0066FF] text-white py-3 rounded-md font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200">
                 Start Free Trial
               </button>
             </div>
 
             {/* Team Tier */}
-            <div className="bg-[#0A0F0A] p-8 rounded border border-[#1F2F1F]">
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
               <h3 className="text-2xl font-bold mb-2">TEAM</h3>
-              <p className="text-[#9CA39C] mb-6">
+              <p className="text-[#6B7280] mb-6">
                 $39/user/month
                 <span className="block text-sm">$390/user/year</span>
               </p>
               
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Everything in Pro
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Shared workspace
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Team analytics
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Admin controls
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   SSO integration
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Priority support
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[#00D37F] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Custom integrations
                 </li>
               </ul>
 
-              <button className="w-full border border-[#00D37F] text-[#00D37F] py-3 rounded hover:bg-[#00D37F] hover:text-[#0A0F0A] transition">
+              <button className="w-full bg-white text-[#0066FF] border-2 border-[#0066FF] py-3 rounded-md font-semibold hover:bg-[#0066FF] hover:text-white transition-all duration-200">
                 Contact Sales
               </button>
             </div>
@@ -499,34 +541,39 @@ const LandingPage = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             The Secret to Consistently Great AI Results
           </h2>
           
-          <p className="text-xl text-[#9CA39C] mb-8">
+          <p className="text-xl text-[#6B7280] mb-8">
             Great prompts aren't lucky accidents. They're engineered.
           </p>
 
-          <button className="bg-[#00D37F] text-[#0A0F0A] px-8 py-4 rounded text-lg font-semibold hover:bg-[#00A865] transition inline-flex items-center">
+          <a
+            href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-[#0066FF] text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
+          >
             <Clock className="mr-2" size={20} />
             Get Prompt Theory
-          </button>
+          </a>
           
-          <p className="mt-4 text-sm text-[#9CA39C]">Start engineering better AI output</p>
+          <p className="mt-4 text-sm text-[#6B7280]">Start engineering better AI output</p>
 
           <div className="flex justify-center space-x-8 mt-8 text-sm">
             <div className="flex items-center">
-              <Lock className="text-[#00D37F] mr-2" size={16} />
+              <Lock className="text-[#0066FF] mr-2" size={16} />
               Your data stays yours
             </div>
             <div className="flex items-center">
-              <CheckCircle className="text-[#00D37F] mr-2" size={16} />
+              <CheckCircle className="text-[#0066FF] mr-2" size={16} />
               30-day money back
             </div>
             <div className="flex items-center">
-              <Zap className="text-[#00D37F] mr-2" size={16} />
+              <Zap className="text-[#0066FF] mr-2" size={16} />
               Free tier forever
             </div>
           </div>
@@ -534,18 +581,18 @@ const LandingPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0F1A0F] py-12 px-4 sm:px-6 lg:px-8 border-t border-[#1F2F1F]">
+      <footer className="bg-[#FAFAFA] py-12 px-4 sm:px-6 lg:px-8 border-t border-[#E5E5E5]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-[#00D37F] font-bold text-xl mb-4">Prompt Theory</h3>
-              <p className="text-[#9CA39C] mb-4">
+              <h3 className="text-[#0066FF] font-bold text-xl mb-4">Prompt Theory</h3>
+              <p className="text-[#6B7280] mb-4">
                 Professional prompt management for people who ship with AI.
               </p>
               <div className="flex space-x-4">
-                <Link to="/privacy" className="text-[#9CA39C] hover:text-[#E5E7E5]">Privacy Policy</Link>
-                <a href="#" className="text-[#9CA39C] hover:text-[#E5E7E5]">Terms</a>
-                <a href="#" className="text-[#9CA39C] hover:text-[#E5E7E5]">Contact</a>
+                <Link to="/privacy" className="text-[#6B7280] hover:text-[#1A1A1A]">Privacy Policy</Link>
+                <a href="#" className="text-[#6B7280] hover:text-[#1A1A1A]">Terms</a>
+                <a href="#" className="text-[#6B7280] hover:text-[#1A1A1A]">Contact</a>
               </div>
             </div>
 
@@ -557,22 +604,22 @@ const LandingPage = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@company.com"
-                  className="flex-1 bg-[#0A0F0A] border border-[#1F2F1F] rounded px-4 py-2 focus:outline-none focus:border-[#00D37F]"
+                  className="flex-1 bg-white border border-[#E5E5E5] rounded-md px-4 py-2 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 transition-all duration-200"
                 />
                 <button 
                   onClick={handleEmailSubmit} 
-                  className="bg-[#00D37F] text-[#0A0F0A] px-6 py-2 rounded hover:bg-[#00A865] transition"
+                  className="bg-[#0066FF] text-white px-6 py-2 rounded-md hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
                 >
                   Subscribe
                 </button>
               </div>
-              <p className="text-sm text-[#9CA39C] mt-2">
+              <p className="text-sm text-[#6B7280] mt-2">
                 Early feature access. No spam. Unsubscribe anytime.
               </p>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-[#1F2F1F] text-center text-sm text-[#9CA39C]">
+          <div className="mt-8 pt-8 border-t border-[#E5E5E5] text-center text-sm text-[#6B7280]">
             © {new Date().getFullYear()} Prompt Theory. Built for builders, by builders.
           </div>
         </div>
