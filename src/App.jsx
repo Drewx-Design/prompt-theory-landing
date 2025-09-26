@@ -421,24 +421,24 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
+      <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAFAFA] to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
             Pricing for Professionals Who Ship
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-end">
             {/* Free Tier */}
-            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#0066FF] text-white px-4 py-1 rounded text-sm font-semibold">
+            <div className="bg-white p-8 rounded-lg border border-[#E5E5E5] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 relative flex flex-col h-full">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#6B46C1] text-white px-4 py-1 rounded text-sm font-semibold shadow-sm">
                 MOST POPULAR
               </div>
 
               <h3 className="text-2xl font-bold mb-2">FREE</h3>
-              <p className="text-[#6B7280] mb-2">Forever</p>
+              <p className="text-xl font-semibold text-[#6B46C1] mb-2">Forever</p>
               <p className="text-sm text-[#6B7280] italic mb-6">*(because it's the only one that exists)*</p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Unlimited prompts
@@ -472,11 +472,11 @@ const LandingPage = () => {
             </div>
 
             {/* Pro Tier */}
-            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+            <div className="bg-[#F0F7FF] p-8 pt-12 pb-12 rounded-lg border-2 border-[#0066FF] shadow-[0_10px_40px_rgba(0,102,255,0.15)] hover:shadow-[0_15px_50px_rgba(0,102,255,0.2)] transition-shadow duration-200 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-2">PRO</h3>
-              <p className="text-[#6B7280] italic mb-6">*Coming Soon™*</p>
+              <p className="text-xl font-semibold text-[#6B46C1] mb-6">*Coming Soon™*</p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Everything in Free
@@ -505,11 +505,11 @@ const LandingPage = () => {
             </div>
 
             {/* Team Tier */}
-            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+            <div className="bg-white p-8 rounded-lg border border-[#E5E5E5] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-2">TEAM</h3>
-              <p className="text-[#6B7280] italic mb-6">*Coming Later*</p>
+              <p className="text-xl font-semibold text-[#6B46C1] mb-6">*Coming Later*</p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
                   <CheckCircle className="text-[#0066FF] mr-2 flex-shrink-0" size={16} />
                   Everything in Pro
