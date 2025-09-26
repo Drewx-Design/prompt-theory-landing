@@ -6,6 +6,7 @@ const LandingPage = () => {
   const [email, setEmail] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ days: 7, hours: 0, minutes: 0 });
+  const [modalImage, setModalImage] = useState(null);
 
   // Mock countdown timer for beta
   useEffect(() => {
@@ -36,6 +37,33 @@ const LandingPage = () => {
     console.log('Email submitted:', email);
     setEmail('');
   };
+
+  const openModal = (imageSrc, alt) => {
+    setModalImage({ src: imageSrc, alt });
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
+  // Handle escape key to close modal
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    if (modalImage) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [modalImage]);
 
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-mono">
@@ -166,29 +194,7 @@ const LandingPage = () => {
             The Difference Between Good and Great AI Output? <span className="text-[#0066FF]">Your Prompts.</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <h3 className="text-[#0066FF] font-semibold mb-4">ENGINEERS</h3>
-              <ul className="space-y-2 text-[#6B7280]">
-                <li>• Debug complex systems in one shot</li>
-                <li>• Generate production-ready code</li>
-                <li>• Write comprehensive test suites</li>
-                <li>• Architect solutions that scale</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <h3 className="text-[#0066FF] font-semibold mb-4">DESIGNERS</h3>
-              <ul className="space-y-2 text-[#6B7280]">
-                <li>• Generate pixel-perfect components</li>
-                <li>• Create consistent design systems</li>
-                <li>• Prototype complex interactions</li>
-                <li>• Write compelling UX copy</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center bg-white p-8 rounded-lg border-2 border-[#6B46C1] shadow-[0_4px_6px_rgba(107,70,193,0.1)]">
+          <div className="text-center bg-white p-8 rounded-lg border-2 border-[#6B46C1] shadow-[0_4px_6px_rgba(107,70,193,0.1)] mb-12">
             <p className="text-2xl font-semibold mb-2">You've felt the difference:</p>
             <p className="text-xl text-[#6B7280] mb-4">
               Generic AI response → Exactly what you needed<br />
@@ -200,6 +206,32 @@ const LandingPage = () => {
               But that game-changing prompt from last week?
               <span className="text-[#1A1A1A] font-bold"> Gone.</span>
             </p>
+          </div>
+
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8">
+            That's why the best engineers and designers build their prompt library:
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <h4 className="text-[#0066FF] font-semibold mb-4">ENGINEERS</h4>
+              <ul className="space-y-2 text-[#6B7280]">
+                <li>• Debug complex systems in one shot</li>
+                <li>• Generate production-ready code</li>
+                <li>• Write comprehensive test suites</li>
+                <li>• Architect solutions that scale</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
+              <h4 className="text-[#0066FF] font-semibold mb-4">DESIGNERS</h4>
+              <ul className="space-y-2 text-[#6B7280]">
+                <li>• Generate pixel-perfect components</li>
+                <li>• Create consistent design systems</li>
+                <li>• Prototype complex interactions</li>
+                <li>• Write compelling UX copy</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -244,11 +276,11 @@ const LandingPage = () => {
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <Download className="text-[#0066FF]" size={24} />
+                <Search className="text-[#0066FF]" size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Share With Your Team</h3>
-                <p className="text-[#6B7280]">Stop asking "what prompt did you use?" Build collective intelligence.</p>
+                <h3 className="text-xl font-semibold mb-2">🔍 Search Everything</h3>
+                <p className="text-[#6B7280]">Find any prompt instantly. Search by name, tag, or content. Never lose that perfect prompt again.</p>
               </div>
             </div>
           </div>
@@ -256,73 +288,57 @@ const LandingPage = () => {
           {/* Screenshot Gallery */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-center mb-8">See Prompt Theory in Action</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
-                <img 
-                  src="/images/screenshot-1-organization.png" 
-                  alt="Organize your prompts by project and workflow" 
-                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
+                <img
+                  src="/images/screenshot-1-organization.png"
+                  alt="Organize your prompts by project and workflow"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
+                  onClick={() => openModal('/images/screenshot-1-organization.png', 'Organize your prompts by project and workflow')}
                 />
                 <h4 className="font-semibold text-[#0066FF] mb-2">Organized by Project</h4>
                 <p className="text-[#6B7280] text-sm">Keep prompts structured exactly how you work - by project, workflow, or any system that makes sense to you.</p>
               </div>
-              
+
               <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
-                <img 
-                  src="/images/screenshot-2-your-prompts.png" 
-                  alt="Your complete prompt library at a glance" 
-                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
+                <img
+                  src="/images/screenshot-2-your-prompts.png"
+                  alt="Your complete prompt library at a glance"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
+                  onClick={() => openModal('/images/screenshot-2-your-prompts.png', 'Your complete prompt library at a glance')}
                 />
                 <h4 className="font-semibold text-[#0066FF] mb-2">Your Prompt Library</h4>
                 <p className="text-[#6B7280] text-sm">Browse your entire collection of prompts with tags, version history, and quick search capabilities.</p>
               </div>
-              
+
               <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
-                <img 
-                  src="/images/screenshot-3-quickcopy.png" 
-                  alt="Quick copy functionality" 
-                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
+                <img
+                  src="/images/screenshot-3-quickcopy.png"
+                  alt="Quick copy functionality"
+                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
+                  onClick={() => openModal('/images/screenshot-3-quickcopy.png', 'Quick copy functionality')}
                 />
                 <h4 className="font-semibold text-[#0066FF] mb-2">One-Click Copy</h4>
                 <p className="text-[#6B7280] text-sm">Copy prompts to your clipboard instantly. No more hunting through old conversations or notes.</p>
               </div>
-              
-              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
-                <img 
-                  src="/images/screenshot-4-newprompt.png" 
-                  alt="Create and save new prompts easily" 
-                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
-                />
-                <h4 className="font-semibold text-[#0066FF] mb-2">Save New Prompts</h4>
-                <p className="text-[#6B7280] text-sm">Capture that perfect prompt the moment you create it. Add tags, notes, and organize for future use.</p>
-              </div>
-              
-              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl">
-                <img 
-                  src="/images/screenshot-5-settings.svg" 
-                  alt="Customizable settings and preferences" 
-                  className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3"
-                />
-                <h4 className="font-semibold text-[#0066FF] mb-2">Customizable</h4>
-                <p className="text-[#6B7280] text-sm">Configure hotkeys, sync preferences, and make the extension work exactly how you want it to.</p>
-              </div>
-              
-              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#0066FF] rounded-full flex items-center justify-center mx-auto mb-3">
-                    <ChevronRight className="text-white" size={24} />
-                  </div>
-                  <h4 className="font-semibold text-[#0066FF] mb-2">Ready to Start?</h4>
-                  <p className="text-[#6B7280] text-sm mb-4">Install the free extension and build your prompt playbook today.</p>
-                  <a
-                    href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#0066FF] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
-                  >
-                    Install Now
-                  </a>
+            </div>
+
+            {/* Ready to Start CTA */}
+            <div className="mt-16 text-center">
+              <div className="bg-gradient-to-b from-[#F5F5F5] to-white p-12 rounded-xl max-w-md mx-auto">
+                <div className="w-16 h-16 bg-[#0066FF] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <ChevronRight className="text-white" size={24} />
                 </div>
+                <h4 className="font-semibold text-[#0066FF] mb-2">Ready to Start?</h4>
+                <p className="text-[#6B7280] text-sm mb-4">Install the free extension and build your prompt playbook today.</p>
+                <a
+                  href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#0066FF] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
+                >
+                  Install Now
+                </a>
               </div>
             </div>
           </div>
@@ -624,6 +640,31 @@ const LandingPage = () => {
           </div>
         </div>
       </footer>
+
+      {/* Image Modal */}
+      {modalImage && (
+        <div
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <button
+              onClick={closeModal}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              aria-label="Close modal"
+            >
+              <X size={32} />
+            </button>
+            <img
+              src={modalImage.src}
+              alt={modalImage.alt}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <p className="text-white text-center mt-4 text-lg">{modalImage.alt}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
