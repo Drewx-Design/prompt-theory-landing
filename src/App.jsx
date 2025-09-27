@@ -58,7 +58,7 @@ const LandingPage = () => {
     }
 
     try {
-      const result = await waitlistApi.subscribe(email, 'footer');
+      const result = await waitlistApi.subscribe(email, 'web');
       setWaitlistStatus('success');
       setWaitlistMessage(result.isNew
         ? "🎉 You're on the waitlist! We'll notify you when premium features launch."
@@ -91,7 +91,7 @@ const LandingPage = () => {
     setProWaitlistMessage('');
 
     try {
-      const result = await waitlistApi.subscribe(email, 'pro_pricing');
+      const result = await waitlistApi.subscribe(email, 'web');
       setProWaitlistStatus('success');
       setProWaitlistMessage(result.isNew
         ? "🎉 You're on the PRO waitlist! We'll notify you when it launches."
@@ -135,7 +135,7 @@ const LandingPage = () => {
     setTeamWaitlistMessage('');
 
     try {
-      const result = await waitlistApi.subscribe(email, 'team_pricing');
+      const result = await waitlistApi.subscribe(email, 'web');
       setTeamWaitlistStatus('success');
       setTeamWaitlistMessage(result.isNew
         ? "🎉 You'll be notified when TEAM features are available!"
