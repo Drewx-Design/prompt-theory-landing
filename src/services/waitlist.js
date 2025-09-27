@@ -46,6 +46,15 @@ export const waitlistApi = {
         throw error;
       }
 
+      // Check for CORS error
+      if (error.message.includes('Failed to fetch') || error.name === 'TypeError') {
+        throw new ApiError(
+          'Service temporarily unavailable. Please try again in a few moments or contact support@prompttheory.dev',
+          503,
+          { originalError: error.message }
+        );
+      }
+
       // Network or other errors
       throw new ApiError(
         'Unable to connect. Please check your internet connection and try again.',
@@ -71,6 +80,8 @@ export const getErrorMessage = (error) => {
         return `Too many attempts. Please try again in ${error.data?.retryAfter || 15} minutes.`;
       case 500:
         return 'Server error. Please try again in a moment.';
+      case 503:
+        return 'Service temporarily unavailable. Please try again later or contact support@prompttheory.dev';
       default:
         return error.message || 'Something went wrong. Please try again.';
     }
