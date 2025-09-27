@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Shield, Zap, GitBranch, Search, Download, Lock, Clock, CheckCircle, Menu, X } from 'lucide-react';
+import { ChevronRight, Shield, Zap, GitBranch, Search, Download, Lock, Clock, CheckCircle, Menu, X, Loader2, AlertCircle } from 'lucide-react';
+import { waitlistApi, validateEmail, getErrorMessage } from './services/waitlist';
 
 const LandingPage = () => {
   const [email, setEmail] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ days: 7, hours: 0, minutes: 0 });
   const [modalImage, setModalImage] = useState(null);
+  const [waitlistStatus, setWaitlistStatus] = useState('idle');
+  const [waitlistMessage, setWaitlistMessage] = useState('');
+  const [proWaitlistStatus, setProWaitlistStatus] = useState('idle');
+  const [proWaitlistMessage, setProWaitlistMessage] = useState('');
+  const [teamWaitlistStatus, setTeamWaitlistStatus] = useState('idle');
+  const [teamWaitlistMessage, setTeamWaitlistMessage] = useState('');
 
   // Mock countdown timer for beta
   useEffect(() => {
@@ -32,10 +39,124 @@ const LandingPage = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleEmailSubmit = () => {
-    // Handle email submission
-    console.log('Email submitted:', email);
-    setEmail('');
+  const handleEmailSubmit = async (e) => {
+    e.preventDefault();
+    setWaitlistStatus('loading');
+    setWaitlistMessage('');
+
+    // Validate email
+    if (!email.trim()) {
+      setWaitlistStatus('error');
+      setWaitlistMessage('Please enter your email address.');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setWaitlistStatus('error');
+      setWaitlistMessage('Please enter a valid email address.');
+      return;
+    }
+
+    try {
+      const result = await waitlistApi.subscribe(email, 'footer');
+      setWaitlistStatus('success');
+      setWaitlistMessage(result.isNew
+        ? "🎉 You're on the waitlist! We'll notify you when premium features launch."
+        : "✅ You're already on our waitlist! We'll be in touch soon."
+      );
+      setEmail('');
+    } catch (error) {
+      setWaitlistStatus('error');
+      setWaitlistMessage(getErrorMessage(error));
+    }
+  };
+
+  const handleProWaitlist = async () => {
+    // Simple prompt for email - we could enhance this with a modal later
+    const email = prompt('Enter your email to join the PRO waitlist:');
+
+    if (!email) return;
+
+    if (!validateEmail(email)) {
+      setProWaitlistStatus('error');
+      setProWaitlistMessage('Please enter a valid email address.');
+      setTimeout(() => {
+        setProWaitlistStatus('idle');
+        setProWaitlistMessage('');
+      }, 3000);
+      return;
+    }
+
+    setProWaitlistStatus('loading');
+    setProWaitlistMessage('');
+
+    try {
+      const result = await waitlistApi.subscribe(email, 'pro_pricing');
+      setProWaitlistStatus('success');
+      setProWaitlistMessage(result.isNew
+        ? "🎉 You're on the PRO waitlist! We'll notify you when it launches."
+        : "✅ You're already on our PRO waitlist! We'll be in touch soon."
+      );
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setProWaitlistStatus('idle');
+        setProWaitlistMessage('');
+      }, 5000);
+    } catch (error) {
+      setProWaitlistStatus('error');
+      setProWaitlistMessage(getErrorMessage(error));
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setProWaitlistStatus('idle');
+        setProWaitlistMessage('');
+      }, 5000);
+    }
+  };
+
+  const handleTeamWaitlist = async () => {
+    // Simple prompt for email - we could enhance this with a modal later
+    const email = prompt('Enter your email to get notified about TEAM features:');
+
+    if (!email) return;
+
+    if (!validateEmail(email)) {
+      setTeamWaitlistStatus('error');
+      setTeamWaitlistMessage('Please enter a valid email address.');
+      setTimeout(() => {
+        setTeamWaitlistStatus('idle');
+        setTeamWaitlistMessage('');
+      }, 3000);
+      return;
+    }
+
+    setTeamWaitlistStatus('loading');
+    setTeamWaitlistMessage('');
+
+    try {
+      const result = await waitlistApi.subscribe(email, 'team_pricing');
+      setTeamWaitlistStatus('success');
+      setTeamWaitlistMessage(result.isNew
+        ? "🎉 You'll be notified when TEAM features are available!"
+        : "✅ You're already on our TEAM notification list!"
+      );
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setTeamWaitlistStatus('idle');
+        setTeamWaitlistMessage('');
+      }, 5000);
+    } catch (error) {
+      setTeamWaitlistStatus('error');
+      setTeamWaitlistMessage(getErrorMessage(error));
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setTeamWaitlistStatus('idle');
+        setTeamWaitlistMessage('');
+      }, 5000);
+    }
   };
 
   const openModal = (imageSrc, alt) => {
@@ -499,9 +620,41 @@ const LandingPage = () => {
                 </li>
               </ul>
 
-              <button className="w-full bg-white text-[#0066FF] border-2 border-[#0066FF] py-3 rounded-md font-semibold hover:bg-[#0066FF] hover:text-white transition-all duration-200">
-                Join Waitlist
+              <button
+                onClick={handleProWaitlist}
+                disabled={proWaitlistStatus === 'loading'}
+                className="w-full bg-white text-[#0066FF] border-2 border-[#0066FF] py-3 rounded-md font-semibold hover:bg-[#0066FF] hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              >
+                {proWaitlistStatus === 'loading' ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                    Joining...
+                  </>
+                ) : proWaitlistStatus === 'success' ? (
+                  <>
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Joined!
+                  </>
+                ) : (
+                  'Join Waitlist'
+                )}
               </button>
+
+              {/* Status message for PRO waitlist */}
+              {proWaitlistMessage && (
+                <div className={`mt-3 p-3 rounded-md text-sm flex items-start gap-2 ${
+                  proWaitlistStatus === 'success'
+                    ? 'bg-green-50 text-green-800 border border-green-200'
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {proWaitlistStatus === 'success' ? (
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  ) : (
+                    <AlertCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
+                  )}
+                  <span>{proWaitlistMessage}</span>
+                </div>
+              )}
             </div>
 
             {/* Team Tier */}
@@ -532,9 +685,41 @@ const LandingPage = () => {
                 </li>
               </ul>
 
-              <button className="w-full bg-gray-100 text-[#6B7280] border border-gray-200 py-3 rounded-md font-semibold hover:bg-gray-200 transition-all duration-200">
-                Get Notified
+              <button
+                onClick={handleTeamWaitlist}
+                disabled={teamWaitlistStatus === 'loading'}
+                className="w-full bg-gray-100 text-[#6B7280] border border-gray-200 py-3 rounded-md font-semibold hover:bg-gray-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              >
+                {teamWaitlistStatus === 'loading' ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                    Joining...
+                  </>
+                ) : teamWaitlistStatus === 'success' ? (
+                  <>
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Subscribed!
+                  </>
+                ) : (
+                  'Get Notified'
+                )}
               </button>
+
+              {/* Status message for TEAM waitlist */}
+              {teamWaitlistMessage && (
+                <div className={`mt-3 p-3 rounded-md text-sm flex items-start gap-2 ${
+                  teamWaitlistStatus === 'success'
+                    ? 'bg-green-50 text-green-800 border border-green-200'
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {teamWaitlistStatus === 'success' ? (
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  ) : (
+                    <AlertCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
+                  )}
+                  <span>{teamWaitlistMessage}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -598,21 +783,52 @@ const LandingPage = () => {
 
             <div>
               <h4 className="font-semibold mb-4">Product updates for technical professionals</h4>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@company.com"
-                  className="flex-1 bg-white border border-[#E5E5E5] rounded-md px-4 py-2 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 transition-all duration-200"
-                />
-                <button 
-                  onClick={handleEmailSubmit} 
-                  className="bg-[#0066FF] text-white px-6 py-2 rounded-md hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
-                >
-                  Subscribe
-                </button>
-              </div>
+              <form onSubmit={handleEmailSubmit} className="space-y-3">
+                <div className="flex gap-2">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@company.com"
+                    disabled={waitlistStatus === 'loading' || waitlistStatus === 'success'}
+                    className="flex-1 bg-white border border-[#E5E5E5] rounded-md px-4 py-2 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 transition-all duration-200 disabled:bg-gray-50 disabled:cursor-not-allowed"
+                  />
+                  <button
+                    type="submit"
+                    disabled={waitlistStatus === 'loading' || waitlistStatus === 'success'}
+                    className="bg-[#0066FF] text-white px-6 py-2 rounded-md hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                  >
+                    {waitlistStatus === 'loading' ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                        Joining...
+                      </>
+                    ) : waitlistStatus === 'success' ? (
+                      <>
+                        <CheckCircle className="w-4 h-4 mr-2" />
+                        Joined!
+                      </>
+                    ) : (
+                      'Join Waitlist'
+                    )}
+                  </button>
+                </div>
+
+                {waitlistMessage && (
+                  <div className={`p-3 rounded-md text-sm flex items-start gap-2 ${
+                    waitlistStatus === 'success'
+                      ? 'bg-green-50 text-green-800 border border-green-200'
+                      : 'bg-red-50 text-red-800 border border-red-200'
+                  }`}>
+                    {waitlistStatus === 'success' ? (
+                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    ) : (
+                      <AlertCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
+                    )}
+                    <span>{waitlistMessage}</span>
+                  </div>
+                )}
+              </form>
               <p className="text-sm text-[#6B7280] mt-2">
                 Early feature access. No spam. Unsubscribe anytime.
               </p>
