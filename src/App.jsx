@@ -221,16 +221,34 @@ const LandingPage = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-b border-[#F5F5F5]">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#features" className="block px-3 py-2 text-[#6B7280] hover:text-[#1A1A1A]">Features</a>
-              <a href="#security" className="block px-3 py-2 text-[#6B7280] hover:text-[#1A1A1A]">Security</a>
-              <a href="#pricing" className="block px-3 py-2 text-[#6B7280] hover:text-[#1A1A1A]">Pricing</a>
+          <div className="md:hidden bg-white border-b border-[#F5F5F5] shadow-lg">
+            <div className="px-4 pt-3 pb-4 space-y-2">
+              <a
+                href="#features"
+                className="block px-3 py-3 text-[#6B7280] hover:text-[#1A1A1A] hover:bg-[#F5F5F5] rounded-md transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a
+                href="#security"
+                className="block px-3 py-3 text-[#6B7280] hover:text-[#1A1A1A] hover:bg-[#F5F5F5] rounded-md transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Security
+              </a>
+              <a
+                href="#pricing"
+                className="block px-3 py-3 text-[#6B7280] hover:text-[#1A1A1A] hover:bg-[#F5F5F5] rounded-md transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
+              </a>
               <a
                 href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-left bg-[#0066FF] text-white px-3 py-2 rounded-md shadow-sm hover:bg-[#0052CC] hover:shadow-md transition-all duration-200"
+                className="block w-full text-center bg-[#0066FF] text-white px-3 py-3 rounded-md shadow-sm hover:bg-[#0052CC] hover:shadow-md transition-all duration-200 mt-3 font-semibold"
               >
                 Install Free Extension
               </a>
@@ -240,51 +258,51 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#F5F5F5] to-white">
+      <section className="pt-24 sm:pt-32 pb-20 sm:pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#F5F5F5] to-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Your Prompts.
-            <span className="text-[#0066FF] block">Your Advantage.</span>
+            <span className="text-[#0066FF] block mt-2">Your Advantage.</span>
           </h1>
 
-          <p className="text-xl text-[#6B7280] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-[#6B7280] mb-8 max-w-2xl mx-auto px-2">
             The people who know how to get the outcomes from these tools are the ones that are gonna make the things that win. Time to become one of them.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-2">
             <a
               href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-[#0066FF] text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200"
+              className="inline-flex items-center bg-[#0066FF] text-white px-6 sm:px-8 py-3 rounded-md text-base sm:text-lg font-semibold hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200 w-full sm:w-auto justify-center"
             >
               Install Free Extension - Early Access
               <ChevronRight className="ml-2" size={20} />
             </a>
           </div>
 
-          <p className="mt-6 text-lg font-semibold text-[#1A1A1A]">
+          <p className="mt-6 text-base sm:text-lg font-semibold text-[#1A1A1A]">
             🚀 Just launched. Join the first builders.
           </p>
 
-          <div className="mt-12">
-            <img 
-              src="/images/promotional-small-440x280.png" 
-              alt="Prompt Theory Extension Preview" 
-              className="mx-auto rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] max-w-md"
+          <div className="mt-12 px-4">
+            <img
+              src="/images/promotional-small-440x280.png"
+              alt="Prompt Theory Extension Preview"
+              className="mx-auto rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] w-full max-w-md"
             />
           </div>
 
-          <div className="mt-12 bg-white p-8 rounded-lg shadow-[0_4px_6px_rgba(0,0,0,0.07)] max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center text-[#1A1A1A]">Why Prompt Theory?</h3>
+          <div className="mt-12 bg-white p-6 sm:p-8 rounded-lg shadow-[0_4px_6px_rgba(0,0,0,0.07)] max-w-3xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-[#1A1A1A]">Why Prompt Theory?</h3>
 
             <div className="text-center mb-6">
-              <p className="text-lg italic text-[#6B7280] mb-4">
+              <p className="text-base sm:text-lg italic text-[#6B7280] mb-4">
                 "I got tired of losing my best ChatGPT prompts. So I built this. Now I ship 3x faster. You should too."
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
               <div>
                 <div className="w-12 h-12 bg-[#0066FF] rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold">🔨</span>
@@ -309,9 +327,9 @@ const LandingPage = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">
             The Difference Between Good and Great AI Output? <span className="text-[#0066FF]">Your Prompts.</span>
           </h2>
 
@@ -358,13 +376,13 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="features" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">
             Your Prompts Are the Key to <span className="text-[#0066FF]">10x AI Performance</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <Zap className="text-[#0066FF]" size={24} />
@@ -467,12 +485,12 @@ const LandingPage = () => {
       </section>
 
       {/* Security Section */}
-      <section id="security" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
+      <section id="security" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
         <div className="max-w-4xl mx-auto text-center">
           <Shield className="text-[#0066FF] mx-auto mb-6" size={48} />
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12">Your Prompts. Your Control.</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">Your Prompts. Your Control.</h2>
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
               <Shield className="text-[#0066FF] mb-4" size={24} />
               <h3 className="font-semibold mb-2">Your prompts stay yours</h3>
@@ -542,15 +560,15 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAFAFA] to-transparent">
+      <section id="pricing" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAFAFA] to-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">
             Pricing for Professionals Who Ship
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch md:items-end">
             {/* Free Tier */}
-            <div className="bg-white p-8 rounded-lg border border-[#E5E5E5] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 relative flex flex-col h-full">
+            <div className="bg-white p-6 sm:p-8 rounded-lg border border-[#E5E5E5] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 relative flex flex-col h-full">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#6B46C1] text-white px-4 py-1 rounded text-sm font-semibold shadow-sm">
                 MOST POPULAR
               </div>
@@ -593,7 +611,7 @@ const LandingPage = () => {
             </div>
 
             {/* Pro Tier */}
-            <div className="bg-[#F0F7FF] p-8 pt-12 pb-12 rounded-lg border-2 border-[#0066FF] shadow-[0_10px_40px_rgba(0,102,255,0.15)] hover:shadow-[0_15px_50px_rgba(0,102,255,0.2)] transition-shadow duration-200 flex flex-col h-full">
+            <div className="bg-[#F0F7FF] p-6 sm:p-8 pt-8 sm:pt-12 pb-8 sm:pb-12 rounded-lg border-2 border-[#0066FF] shadow-[0_10px_40px_rgba(0,102,255,0.15)] hover:shadow-[0_15px_50px_rgba(0,102,255,0.2)] transition-shadow duration-200 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-2">PRO</h3>
               <p className="text-xl font-semibold text-[#6B46C1] mb-6">*Coming Soon™*</p>
 
@@ -658,7 +676,7 @@ const LandingPage = () => {
             </div>
 
             {/* Team Tier */}
-            <div className="bg-white p-8 rounded-lg border border-[#E5E5E5] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 flex flex-col h-full">
+            <div className="bg-white p-6 sm:p-8 rounded-lg border border-[#E5E5E5] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-2">TEAM</h3>
               <p className="text-xl font-semibold text-[#6B46C1] mb-6">*Coming Later*</p>
 
@@ -784,19 +802,19 @@ const LandingPage = () => {
             <div>
               <h4 className="font-semibold mb-4">Product updates for technical professionals</h4>
               <form onSubmit={handleEmailSubmit} className="space-y-3">
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@company.com"
                     disabled={waitlistStatus === 'loading' || waitlistStatus === 'success'}
-                    className="flex-1 bg-white border border-[#E5E5E5] rounded-md px-4 py-2 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 transition-all duration-200 disabled:bg-gray-50 disabled:cursor-not-allowed"
+                    className="flex-1 bg-white border border-[#E5E5E5] rounded-md px-4 py-2 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/20 transition-all duration-200 disabled:bg-gray-50 disabled:cursor-not-allowed min-w-0"
                   />
                   <button
                     type="submit"
                     disabled={waitlistStatus === 'loading' || waitlistStatus === 'success'}
-                    className="bg-[#0066FF] text-white px-6 py-2 rounded-md hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                    className="bg-[#0066FF] text-white px-4 sm:px-6 py-2 rounded-md hover:bg-[#0052CC] shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center whitespace-nowrap"
                   >
                     {waitlistStatus === 'loading' ? (
                       <>
