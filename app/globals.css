@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================ */
+/* SELF-HOSTED FONTS */
+/* ============================================ */
+
+/* jetbrains-mono-regular - latin */
+@font-face {
+  font-display: swap; /* CRITICAL: prevents invisible text flash */
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2');
+}
+
+/* jetbrains-mono-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/jetbrains-mono-v24-latin-500.woff2') format('woff2');
+}
+
+/* jetbrains-mono-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/jetbrains-mono-v24-latin-600.woff2') format('woff2');
+}
+
+/* jetbrains-mono-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/jetbrains-mono-v24-latin-700.woff2') format('woff2');
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
