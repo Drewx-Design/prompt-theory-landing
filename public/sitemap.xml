@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!--
+    Sitemap for Prompt Theory
+    Lists all important pages and images for search engines
+  -->
+
+  <!-- ============================================ -->
+  <!-- HOMEPAGE -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://prompttheory.dev/</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Images on homepage (helps with Google Images) -->
+    <image:image>
+      <image:loc>https://prompttheory.dev/images/promotional-small-440x280.png</image:loc>
+      <image:title>Prompt Theory Extension Preview</image:title>
+      <image:caption>Prompt Theory Chrome extension interface showing prompt organization and management</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://prompttheory.dev/images/screenshot-1-organization.png</image:loc>
+      <image:title>Organize Prompts by Project</image:title>
+      <image:caption>Prompt Theory interface showing project-based prompt organization</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://prompttheory.dev/images/screenshot-2-your-prompts.png</image:loc>
+      <image:title>Prompt Library Interface</image:title>
+      <image:caption>Complete prompt library view with tags and search functionality</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://prompttheory.dev/images/screenshot-3-quickcopy.png</image:loc>
+      <image:title>Quick Copy Functionality</image:title>
+      <image:caption>One-click prompt copying to clipboard feature</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- PRIVACY POLICY PAGE -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://prompttheory.dev/privacy</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- FUTURE PAGES (Add as you create them) -->
+  <!-- ============================================ -->
+  <!--
+  <url>
+    <loc>https://prompttheory.dev/blog</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+
+</urlset>

@@ -1,0 +1,58 @@
+# Prompt Theory - Robots.txt
+# This file tells search engine crawlers which pages to crawl
+
+User-agent: *
+Allow: /
+
+# Sitemap location (helps crawlers find all pages)
+Sitemap: https://prompttheory.dev/sitemap.xml
+
+# Block unnecessary paths if they exist
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# ============================================
+# AI CRAWLERS - Control AI training
+# ============================================
+
+# OpenAI's GPT crawler (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+# Google's AI training crawler (Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic's Claude crawler
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity's crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Meta's AI crawler
+User-agent: FacebookBot
+Allow: /
+
+# Common AI crawlers
+User-agent: CCBot
+Allow: /
+
+# Note: "Allow: /" means these crawlers CAN use your content for training
+# If you want to BLOCK AI training, change "Allow: /" to "Disallow: /"
+# Current setting: ALLOWING AI training for better AI search visibility
+
+# ============================================
+# GOOD BOTS - Always allow
+# ============================================
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

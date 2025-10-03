@@ -289,6 +289,10 @@ const LandingPage = () => {
             <img
               src="/images/promotional-small-440x280.png"
               alt="Prompt Theory Extension Preview"
+              width="440"
+              height="280"
+              loading="eager"
+              fetchpriority="high"
               className="mx-auto rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] w-full max-w-md"
             />
           </div>
@@ -432,6 +436,9 @@ const LandingPage = () => {
                 <img
                   src="/images/screenshot-1-organization.png"
                   alt="Organize your prompts by project and workflow"
+                  width="1280"
+                  height="800"
+                  loading="lazy"
                   className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
                   onClick={() => openModal('/images/screenshot-1-organization.png', 'Organize your prompts by project and workflow')}
                 />
@@ -443,6 +450,9 @@ const LandingPage = () => {
                 <img
                   src="/images/screenshot-2-your-prompts.png"
                   alt="Your complete prompt library at a glance"
+                  width="1280"
+                  height="800"
+                  loading="lazy"
                   className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
                   onClick={() => openModal('/images/screenshot-2-your-prompts.png', 'Your complete prompt library at a glance')}
                 />
@@ -454,6 +464,9 @@ const LandingPage = () => {
                 <img
                   src="/images/screenshot-3-quickcopy.png"
                   alt="Quick copy functionality"
+                  width="1280"
+                  height="800"
+                  loading="lazy"
                   className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
                   onClick={() => openModal('/images/screenshot-3-quickcopy.png', 'Quick copy functionality')}
                 />

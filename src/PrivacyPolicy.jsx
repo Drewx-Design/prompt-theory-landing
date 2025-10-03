@@ -7,8 +7,32 @@ const PrivacyPolicy = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://prompttheory.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://prompttheory.dev/privacy"
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen bg-[#0A0F0A] text-[#E5E7E5] font-mono">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="min-h-screen bg-[#0A0F0A] text-[#E5E7E5] font-mono">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-[#0A0F0A]/90 backdrop-blur-md border-b border-[#1F2F1F] z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -212,7 +236,8 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
