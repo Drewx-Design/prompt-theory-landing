@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Shield, Lock, Database, Cloud, User, Key, Globe, Settings, AlertCircle, ChevronLeft } from 'lucide-react';
+import { Shield, Lock, Database, Cloud, User, Key, Globe, Settings, AlertCircle, Menu, X } from 'lucide-react';
 
 const PrivacyPolicyClient: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -43,12 +45,70 @@ const PrivacyPolicyClient: React.FC = () => {
               <Link href="/" className="text-xl font-bold text-primary-500">Prompt Theory</Link>
             </div>
 
-            <Link href="/" className="text-neutral-500 hover:text-neutral-900 transition flex items-center">
-              <ChevronLeft className="mr-1" size={16} />
-              Back to Home
-            </Link>
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/#features" className="text-neutral-500 hover:text-neutral-900 transition">Features</Link>
+              <Link href="/#security" className="text-neutral-500 hover:text-neutral-900 transition">Security</Link>
+              <Link href="/#pricing" className="text-neutral-500 hover:text-neutral-900 transition">Pricing</Link>
+              <Link href="/changelog" className="text-neutral-500 hover:text-neutral-900 transition">Changelog</Link>
+              <a
+                href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-primary-600 hover:shadow-md transition-all duration-200"
+              >
+                Install Free Extension
+              </a>
+            </div>
+
+            <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white border-b border-neutral-100 shadow-lg">
+            <div className="px-4 pt-3 pb-4 space-y-2">
+              <Link
+                href="/#features"
+                className="block px-3 py-3 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
+              </Link>
+              <Link
+                href="/#security"
+                className="block px-3 py-3 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Security
+              </Link>
+              <Link
+                href="/#pricing"
+                className="block px-3 py-3 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
+              </Link>
+              <Link
+                href="/changelog"
+                className="block px-3 py-3 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Changelog
+              </Link>
+              <a
+                href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-primary-500 text-white px-3 py-3 rounded-md shadow-sm hover:bg-primary-600 hover:shadow-md transition-all duration-200 mt-3 font-semibold"
+              >
+                Install Free Extension
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Privacy Policy Content */}
