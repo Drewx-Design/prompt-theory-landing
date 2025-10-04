@@ -297,20 +297,20 @@ const ChangelogClient: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[var(--neutral-900)] font-mono">
+    <div className="min-h-screen bg-white text-neutral-900 font-mono">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-[var(--neutral-100)] z-50">
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-neutral-100 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-xl font-bold text-[var(--primary-500)]">
+              <Link href="/" className="text-xl font-bold text-primary-500">
                 Prompt Theory
               </Link>
             </div>
 
             <Link
               href="/"
-              className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)] transition flex items-center"
+              className="text-neutral-500 hover:text-neutral-900 transition flex items-center"
             >
               <ChevronLeft className="mr-1" size={16} />
               Back to Home
@@ -324,9 +324,9 @@ const ChangelogClient: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="mb-12 text-center">
-            <Zap className="text-[var(--primary-500)] mx-auto mb-4" size={48} />
+            <Zap className="text-primary-500 mx-auto mb-4" size={48} />
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">What's New in Prompt Theory</h1>
-            <p className="text-lg text-[var(--neutral-500)]">
+            <p className="text-lg text-neutral-500">
               Current Version: 1.3.0 • Last updated October 3, 2025
             </p>
           </div>
@@ -336,15 +336,15 @@ const ChangelogClient: React.FC = () => {
             {changelogEntries.map((entry, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[var(--neutral-200)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200"
+                className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-neutral-200 hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200"
               >
                 {/* Version Header */}
-                <div className="mb-6 pb-4 border-b border-[var(--neutral-200)]">
+                <div className="mb-6 pb-4 border-b border-neutral-200">
                   <div className="flex items-center justify-between flex-wrap gap-2">
-                    <h2 className="text-2xl font-bold text-[var(--primary-500)]">
+                    <h2 className="text-2xl font-bold text-primary-500">
                       v{entry.version}
                     </h2>
-                    <div className="flex items-center text-[var(--neutral-500)]">
+                    <div className="flex items-center text-neutral-500">
                       <Calendar size={16} className="mr-2" />
                       <span>{entry.date}</span>
                     </div>
@@ -362,10 +362,10 @@ const ChangelogClient: React.FC = () => {
                         {getTypeIcon(item.type)}
                       </span>
                       <div className="flex-1">
-                        <span className="inline-block px-2 py-0.5 text-xs font-semibold rounded bg-[var(--primary-50)] text-[var(--primary-500)] mr-2">
+                        <span className="inline-block px-2 py-0.5 text-xs font-semibold rounded bg-primary-50 text-primary-500 mr-2">
                           {getTypeLabel(item.type)}
                         </span>
-                        <span className="text-[var(--neutral-900)]">{item.description}</span>
+                        <span className="text-neutral-900">{item.description}</span>
                       </div>
                     </li>
                   ))}
@@ -377,32 +377,32 @@ const ChangelogClient: React.FC = () => {
           {/* Empty State (shown when no entries) */}
           {changelogEntries.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-[var(--neutral-500)] text-lg">
+              <p className="text-neutral-500 text-lg">
                 No changelog entries yet. Check back soon for updates!
               </p>
             </div>
           )}
 
           {/* Footer */}
-          <div className="text-center pt-12 border-t border-[var(--neutral-200)] mt-12">
+          <div className="text-center pt-12 border-t border-neutral-200 mt-12">
             <h2 className="text-2xl font-bold mb-6">Get Prompt Theory</h2>
             <div className="mb-8">
-              <p className="text-[var(--neutral-500)]">
+              <p className="text-neutral-500">
                 <strong>Support:</strong>{' '}
                 <a
                   href="mailto:support@prompttheory.com"
-                  className="text-[var(--primary-500)] hover:text-[var(--primary-600)] transition"
+                  className="text-primary-500 hover:text-primary-600 transition"
                 >
                   support@prompttheory.com
                 </a>
               </p>
             </div>
-            <p className="text-[var(--neutral-500)] italic mb-6 max-w-2xl mx-auto">
+            <p className="text-neutral-500 italic mb-6 max-w-2xl mx-auto">
               Prompt Theory is an indie Chrome extension built for people who use AI tools daily. Save your best prompts. Access them instantly. Never start from scratch again.
             </p>
             <Link
               href="/"
-              className="inline-block text-[var(--primary-500)] hover:text-[var(--primary-600)] transition font-semibold"
+              className="inline-block text-primary-500 hover:text-primary-600 transition font-semibold"
             >
               Return to Homepage
             </Link>

@@ -202,28 +202,28 @@ const LandingPageClient = () => {
   }, [modalImage]);
 
   return (
-    <div className="min-h-screen bg-white text-[var(--neutral-900)] font-mono">
+    <div className="min-h-screen bg-white text-neutral-900 font-mono">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-[var(--neutral-100)] z-50">
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-neutral-100 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="#" className="text-xl font-bold text-[var(--primary-500)]" onClick={(e) => {
+              <a href="#" className="text-xl font-bold text-primary-500" onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}>Prompt Theory</a>
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)] transition">Features</a>
-              <a href="#security" className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)] transition">Security</a>
-              <a href="#pricing" className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)] transition">Pricing</a>
-              <Link href="/changelog" className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)] transition">Changelog</Link>
+              <a href="#features" className="text-neutral-500 hover:text-neutral-900 transition">Features</a>
+              <a href="#security" className="text-neutral-500 hover:text-neutral-900 transition">Security</a>
+              <a href="#pricing" className="text-neutral-500 hover:text-neutral-900 transition">Pricing</a>
+              <Link href="/changelog" className="text-neutral-500 hover:text-neutral-900 transition">Changelog</Link>
               <a
                 href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[var(--primary-500)] text-white px-4 py-2 rounded-md shadow-sm hover:bg-[var(--primary-600)] hover:shadow-md transition-all duration-200"
+                className="inline-block bg-primary-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-primary-600 hover:shadow-md transition-all duration-200"
               >
                 Install Free Extension
               </a>
@@ -237,25 +237,25 @@ const LandingPageClient = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-b border-[var(--neutral-100)] shadow-lg">
+          <div className="md:hidden bg-white border-b border-neutral-100 shadow-lg">
             <div className="px-4 pt-3 pb-4 space-y-2">
               <a
                 href="#features"
-                className="block px-3 py-3 text-[var(--neutral-500)] hover:text-[var(--neutral-900)] hover:bg-[var(--neutral-100)] rounded-md transition-all"
+                className="block px-3 py-3 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-all"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <a
                 href="#security"
-                className="block px-3 py-3 text-[var(--neutral-500)] hover:text-[var(--neutral-900)] hover:bg-[var(--neutral-100)] rounded-md transition-all"
+                className="block px-3 py-3 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-all"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Security
               </a>
               <a
                 href="#pricing"
-                className="block px-3 py-3 text-[var(--neutral-500)] hover:text-[var(--neutral-900)] hover:bg-[var(--neutral-100)] rounded-md transition-all"
+                className="block px-3 py-3 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-all"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
@@ -264,7 +264,7 @@ const LandingPageClient = () => {
                 href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-[var(--primary-500)] text-white px-3 py-3 rounded-md shadow-sm hover:bg-[var(--primary-600)] hover:shadow-md transition-all duration-200 mt-3 font-semibold"
+                className="block w-full text-center bg-primary-500 text-white px-3 py-3 rounded-md shadow-sm hover:bg-primary-600 hover:shadow-md transition-all duration-200 mt-3 font-semibold"
               >
                 Install Free Extension
               </a>
@@ -274,14 +274,14 @@ const LandingPageClient = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-32 pb-20 sm:pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[var(--neutral-100)] to-white">
+      <section className="pt-24 sm:pt-32 pb-20 sm:pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-neutral-100 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Your Prompts.
-            <span className="text-[var(--primary-500)] block mt-2">Your Advantage.</span>
+            <span className="text-primary-500 block mt-2">Your Advantage.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-[var(--neutral-500)] mb-8 max-w-2xl mx-auto px-2">
+          <p className="text-lg sm:text-xl text-neutral-500 mb-8 max-w-2xl mx-auto px-2">
             The people who know how to get the outcomes from these tools are the ones that are gonna make the things that win. Time to become one of them.
           </p>
 
@@ -290,14 +290,14 @@ const LandingPageClient = () => {
               href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-[var(--primary-500)] text-white px-6 sm:px-8 py-3 rounded-md text-base sm:text-lg font-semibold hover:bg-[var(--primary-600)] shadow-sm hover:shadow-md transition-all duration-200 w-full sm:w-auto justify-center"
+              className="inline-flex items-center bg-primary-500 text-white px-6 sm:px-8 py-3 rounded-md text-base sm:text-lg font-semibold hover:bg-primary-600 shadow-sm hover:shadow-md transition-all duration-200 w-full sm:w-auto justify-center"
             >
               Install Free Extension - Early Access
               <ChevronRight className="ml-2" size={20} />
             </a>
           </div>
 
-          <p className="mt-6 text-base sm:text-lg font-semibold text-[var(--neutral-900)]">
+          <p className="mt-6 text-base sm:text-lg font-semibold text-neutral-900">
             🚀 Just launched. Join the first builders.
           </p>
 
@@ -314,32 +314,32 @@ const LandingPageClient = () => {
           </div>
 
           <div className="mt-12 bg-white p-6 sm:p-8 rounded-lg shadow-[0_4px_6px_rgba(0,0,0,0.07)] max-w-3xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-[var(--neutral-900)]">Why Prompt Theory?</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-neutral-900">Why Prompt Theory?</h3>
 
             <div className="text-center mb-6">
-              <p className="text-base sm:text-lg italic text-[var(--neutral-500)] mb-4">
+              <p className="text-base sm:text-lg italic text-neutral-500 mb-4">
                 "I got tired of losing my best ChatGPT prompts. So I built this. Now I ship 3x faster. You should too."
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
               <div>
-                <div className="w-12 h-12 bg-[var(--primary-500)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold">🔨</span>
                 </div>
-                <p className="text-sm text-[var(--neutral-500)]">Built by a builder who uses AI daily</p>
+                <p className="text-sm text-neutral-500">Built by a builder who uses AI daily</p>
               </div>
               <div>
-                <div className="w-12 h-12 bg-[var(--primary-500)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold">🎯</span>
                 </div>
-                <p className="text-sm text-[var(--neutral-500)]">Focused on one thing: making you dangerous with AI</p>
+                <p className="text-sm text-neutral-500">Focused on one thing: making you dangerous with AI</p>
               </div>
               <div>
-                <div className="w-12 h-12 bg-[var(--primary-500)] rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold">💬</span>
                 </div>
-                <p className="text-sm text-[var(--neutral-500)]">Your feature requests considered (I actually read them)</p>
+                <p className="text-sm text-neutral-500">Your feature requests considered (I actually read them)</p>
               </div>
             </div>
           </div>
@@ -350,20 +350,20 @@ const LandingPageClient = () => {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">
-            The Difference Between Good and Great AI Output? <span className="text-[var(--primary-500)]">Your Prompts.</span>
+            The Difference Between Good and Great AI Output? <span className="text-primary-500">Your Prompts.</span>
           </h2>
 
           <div className="text-center bg-white p-8 rounded-lg border-2 border-[#6B46C1] shadow-[0_4px_6px_rgba(107,70,193,0.1)] mb-12">
             <p className="text-2xl font-semibold mb-2">You've felt the difference:</p>
-            <p className="text-xl text-[var(--neutral-500)] mb-4">
+            <p className="text-xl text-neutral-500 mb-4">
               Generic AI response → Exactly what you needed<br />
               Hours of iteration → Nailing it first try<br />
               AI as a toy → AI as a force multiplier
             </p>
             <p className="text-3xl text-[#6B46C1] font-bold">The secret? The right prompt.</p>
-            <p className="mt-4 text-[var(--neutral-500)]">
+            <p className="mt-4 text-neutral-500">
               But that game-changing prompt from last week?
-              <span className="text-[var(--neutral-900)] font-bold"> Gone.</span>
+              <span className="text-neutral-900 font-bold"> Gone.</span>
             </p>
           </div>
 
@@ -373,8 +373,8 @@ const LandingPageClient = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <h4 className="text-[var(--primary-500)] font-semibold mb-4">ENGINEERS</h4>
-              <ul className="space-y-2 text-[var(--neutral-500)]">
+              <h4 className="text-primary-500 font-semibold mb-4">ENGINEERS</h4>
+              <ul className="space-y-2 text-neutral-500">
                 <li>• Debug complex systems in one shot</li>
                 <li>• Generate production-ready code</li>
                 <li>• Write comprehensive test suites</li>
@@ -383,8 +383,8 @@ const LandingPageClient = () => {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <h4 className="text-[var(--primary-500)] font-semibold mb-4">DESIGNERS</h4>
-              <ul className="space-y-2 text-[var(--neutral-500)]">
+              <h4 className="text-primary-500 font-semibold mb-4">DESIGNERS</h4>
+              <ul className="space-y-2 text-neutral-500">
                 <li>• Generate pixel-perfect components</li>
                 <li>• Create consistent design systems</li>
                 <li>• Prototype complex interactions</li>
@@ -399,47 +399,47 @@ const LandingPageClient = () => {
       <section id="features" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">
-            Your Prompts Are the Key to <span className="text-[var(--primary-500)]">10x AI Performance</span>
+            Your Prompts Are the Key to <span className="text-primary-500">10x AI Performance</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <Zap className="text-[var(--primary-500)]" size={24} />
+                <Zap className="text-primary-500" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Instant Access Anywhere</h3>
-                <p className="text-[var(--neutral-500)]">Cmd+Shift+Space in any AI tool. Your entire library. 300ms.</p>
+                <p className="text-neutral-500">Cmd+Shift+Space in any AI tool. Your entire library. 300ms.</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <GitBranch className="text-[var(--primary-500)]" size={24} />
+                <GitBranch className="text-primary-500" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Version Everything</h3>
-                <p className="text-[var(--neutral-500)]">Track what worked. Compare outputs. Build on success.</p>
+                <p className="text-neutral-500">Track what worked. Compare outputs. Build on success.</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <Search className="text-[var(--primary-500)]" size={24} />
+                <Search className="text-primary-500" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Organize by Project & Workflow</h3>
-                <p className="text-[var(--neutral-500)]">Frontend. Backend. Design system. Data pipeline. Structure it how you work.</p>
+                <p className="text-neutral-500">Frontend. Backend. Design system. Data pipeline. Structure it how you work.</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <Search className="text-[var(--primary-500)]" size={24} />
+                <Search className="text-primary-500" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">🔍 Search Everything</h3>
-                <p className="text-[var(--neutral-500)]">Find any prompt instantly. Search by name, tag, or content. Never lose that perfect prompt again.</p>
+                <p className="text-neutral-500">Find any prompt instantly. Search by name, tag, or content. Never lose that perfect prompt again.</p>
               </div>
             </div>
           </div>
@@ -448,7 +448,7 @@ const LandingPageClient = () => {
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-center mb-8">See Prompt Theory in Action</h3>
             <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="bg-gradient-to-b from-[var(--neutral-100)] to-white p-12 rounded-xl">
+              <div className="bg-gradient-to-b from-neutral-100 to-white p-12 rounded-xl">
                 <img
                   src="/images/screenshot-1-organization.png"
                   alt="Organize your prompts by project and workflow"
@@ -458,11 +458,11 @@ const LandingPageClient = () => {
                   className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
                   onClick={() => openModal('/images/screenshot-1-organization.png', 'Organize your prompts by project and workflow')}
                 />
-                <h4 className="font-semibold text-[var(--primary-500)] mb-2">Organized by Project</h4>
-                <p className="text-[var(--neutral-500)] text-sm">Keep prompts structured exactly how you work - by project, workflow, or any system that makes sense to you.</p>
+                <h4 className="font-semibold text-primary-500 mb-2">Organized by Project</h4>
+                <p className="text-neutral-500 text-sm">Keep prompts structured exactly how you work - by project, workflow, or any system that makes sense to you.</p>
               </div>
 
-              <div className="bg-gradient-to-b from-[var(--neutral-100)] to-white p-12 rounded-xl">
+              <div className="bg-gradient-to-b from-neutral-100 to-white p-12 rounded-xl">
                 <img
                   src="/images/screenshot-2-your-prompts.png"
                   alt="Your complete prompt library at a glance"
@@ -472,11 +472,11 @@ const LandingPageClient = () => {
                   className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
                   onClick={() => openModal('/images/screenshot-2-your-prompts.png', 'Your complete prompt library at a glance')}
                 />
-                <h4 className="font-semibold text-[var(--primary-500)] mb-2">Your Prompt Library</h4>
-                <p className="text-[var(--neutral-500)] text-sm">Browse your entire collection of prompts with tags, version history, and quick search capabilities.</p>
+                <h4 className="font-semibold text-primary-500 mb-2">Your Prompt Library</h4>
+                <p className="text-neutral-500 text-sm">Browse your entire collection of prompts with tags, version history, and quick search capabilities.</p>
               </div>
 
-              <div className="bg-gradient-to-b from-[var(--neutral-100)] to-white p-12 rounded-xl">
+              <div className="bg-gradient-to-b from-neutral-100 to-white p-12 rounded-xl">
                 <img
                   src="/images/screenshot-3-quickcopy.png"
                   alt="Quick copy functionality"
@@ -486,24 +486,24 @@ const LandingPageClient = () => {
                   className="w-full rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.1)] mb-3 cursor-pointer hover:shadow-[0_15px_50px_rgba(0,0,0,0.15)] transition-shadow duration-300"
                   onClick={() => openModal('/images/screenshot-3-quickcopy.png', 'Quick copy functionality')}
                 />
-                <h4 className="font-semibold text-[var(--primary-500)] mb-2">One-Click Copy</h4>
-                <p className="text-[var(--neutral-500)] text-sm">Copy prompts to your clipboard instantly. No more hunting through old conversations or notes.</p>
+                <h4 className="font-semibold text-primary-500 mb-2">One-Click Copy</h4>
+                <p className="text-neutral-500 text-sm">Copy prompts to your clipboard instantly. No more hunting through old conversations or notes.</p>
               </div>
             </div>
 
             {/* Ready to Start CTA */}
             <div className="mt-16 text-center">
-              <div className="bg-gradient-to-b from-[var(--neutral-100)] to-white p-12 rounded-xl max-w-md mx-auto">
-                <div className="w-16 h-16 bg-[var(--primary-500)] rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="bg-gradient-to-b from-neutral-100 to-white p-12 rounded-xl max-w-md mx-auto">
+                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <ChevronRight className="text-white" size={24} />
                 </div>
-                <h4 className="font-semibold text-[var(--primary-500)] mb-2">Ready to Start?</h4>
-                <p className="text-[var(--neutral-500)] text-sm mb-4">Install the free extension and build your prompt playbook today.</p>
+                <h4 className="font-semibold text-primary-500 mb-2">Ready to Start?</h4>
+                <p className="text-neutral-500 text-sm mb-4">Install the free extension and build your prompt playbook today.</p>
                 <a
                   href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-[var(--primary-500)] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-[var(--primary-600)] shadow-sm hover:shadow-md transition-all duration-200"
+                  className="inline-block bg-primary-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-primary-600 shadow-sm hover:shadow-md transition-all duration-200"
                 >
                   Install Now
                 </a>
@@ -516,32 +516,32 @@ const LandingPageClient = () => {
       {/* Security Section */}
       <section id="security" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
         <div className="max-w-4xl mx-auto text-center">
-          <Shield className="text-[var(--primary-500)] mx-auto mb-6" size={48} />
+          <Shield className="text-primary-500 mx-auto mb-6" size={48} />
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">Your Prompts. Your Control.</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <Shield className="text-[var(--primary-500)] mb-4" size={24} />
+              <Shield className="text-primary-500 mb-4" size={24} />
               <h3 className="font-semibold mb-2">Your prompts stay yours</h3>
-              <p className="text-[var(--neutral-500)] text-sm">Complete ownership and control over your prompt library</p>
+              <p className="text-neutral-500 text-sm">Complete ownership and control over your prompt library</p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <Lock className="text-[var(--primary-500)] mb-4" size={24} />
+              <Lock className="text-primary-500 mb-4" size={24} />
               <h3 className="font-semibold mb-2">Delete anything anytime</h3>
-              <p className="text-[var(--neutral-500)] text-sm">Full control to remove any prompt or data whenever you want</p>
+              <p className="text-neutral-500 text-sm">Full control to remove any prompt or data whenever you want</p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <CheckCircle className="text-[var(--primary-500)] mb-4" size={24} />
+              <CheckCircle className="text-primary-500 mb-4" size={24} />
               <h3 className="font-semibold mb-2">No selling your data</h3>
-              <p className="text-[var(--neutral-500)] text-sm">We make money from subscriptions, not from your information</p>
+              <p className="text-neutral-500 text-sm">We make money from subscriptions, not from your information</p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200">
-              <Download className="text-[var(--primary-500)] mb-4" size={24} />
+              <Download className="text-primary-500 mb-4" size={24} />
               <h3 className="font-semibold mb-2">Simple, transparent storage</h3>
-              <p className="text-[var(--neutral-500)] text-sm">Clear data practices with no hidden complexity or fine print</p>
+              <p className="text-neutral-500 text-sm">Clear data practices with no hidden complexity or fine print</p>
             </div>
           </div>
         </div>
@@ -550,37 +550,37 @@ const LandingPageClient = () => {
       {/* Beta Benefits */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-[var(--primary-500)]/10 to-[#6B46C1]/10 p-8 rounded-lg border-2 border-[var(--primary-500)] shadow-[0_4px_6px_rgba(0,102,255,0.1)]">
+          <div className="bg-gradient-to-r from-primary-500/10 to-[#6B46C1]/10 p-8 rounded-lg border-2 border-primary-500 shadow-[0_4px_6px_rgba(0,102,255,0.1)]">
             <h2 className="text-3xl font-bold mb-6 text-center">First 100 users get:</h2>
 
             <div className="flex justify-center mb-6">
               <div className="flex space-x-6 text-2xl">
                 <div className="text-center">
-                  <div className="text-[var(--primary-500)] font-bold">{timeLeft.days}</div>
-                  <div className="text-sm text-[var(--neutral-500)]">days</div>
+                  <div className="text-primary-500 font-bold">{timeLeft.days}</div>
+                  <div className="text-sm text-neutral-500">days</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-[var(--primary-500)] font-bold">{timeLeft.hours}</div>
-                  <div className="text-sm text-[var(--neutral-500)]">hours</div>
+                  <div className="text-primary-500 font-bold">{timeLeft.hours}</div>
+                  <div className="text-sm text-neutral-500">hours</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-[var(--primary-500)] font-bold">{timeLeft.minutes}</div>
-                  <div className="text-sm text-[var(--neutral-500)]">mins</div>
+                  <div className="text-primary-500 font-bold">{timeLeft.minutes}</div>
+                  <div className="text-sm text-neutral-500">mins</div>
                 </div>
               </div>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-4 text-center">
               <div>
-                <CheckCircle className="text-[var(--primary-500)] mx-auto mb-2" size={24} />
+                <CheckCircle className="text-primary-500 mx-auto mb-2" size={24} />
                 <p>Direct line to the founder (me)</p>
               </div>
               <div>
-                <CheckCircle className="text-[var(--primary-500)] mx-auto mb-2" size={24} />
+                <CheckCircle className="text-primary-500 mx-auto mb-2" size={24} />
                 <p>Input on the roadmap - I build what helps you ship</p>
               </div>
               <div>
-                <CheckCircle className="text-[var(--primary-500)] mx-auto mb-2" size={24} />
+                <CheckCircle className="text-primary-500 mx-auto mb-2" size={24} />
                 <p>First access to new features</p>
               </div>
             </div>
@@ -597,34 +597,34 @@ const LandingPageClient = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch md:items-end">
             {/* Free Tier */}
-            <div className="bg-white p-6 sm:p-8 rounded-lg border border-[var(--neutral-200)] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 relative flex flex-col h-full">
+            <div className="bg-white p-6 sm:p-8 rounded-lg border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 relative flex flex-col h-full">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#6B46C1] text-white px-4 py-1 rounded text-sm font-semibold shadow-sm">
                 MOST POPULAR
               </div>
 
               <h3 className="text-2xl font-bold mb-2">FREE</h3>
               <p className="text-xl font-semibold text-[#6B46C1] mb-2">Forever</p>
-              <p className="text-sm text-[var(--neutral-500)] italic mb-6">*(because it's the only one that exists)*</p>
+              <p className="text-sm text-neutral-500 italic mb-6">*(because it's the only one that exists)*</p>
 
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Unlimited prompts
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Unlimited projects
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Basic search
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   30-day history
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Cloud sync
                 </li>
               </ul>
@@ -633,36 +633,36 @@ const LandingPageClient = () => {
                 href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-[var(--primary-500)] text-white py-3 rounded-md font-semibold hover:bg-[var(--primary-600)] shadow-sm hover:shadow-md transition-all duration-200 text-center"
+                className="block w-full bg-primary-500 text-white py-3 rounded-md font-semibold hover:bg-primary-600 shadow-sm hover:shadow-md transition-all duration-200 text-center"
               >
                 Start Free
               </a>
             </div>
 
             {/* Pro Tier */}
-            <div className="bg-[var(--primary-50)] p-6 sm:p-8 pt-8 sm:pt-12 pb-8 sm:pb-12 rounded-lg border-2 border-[var(--primary-500)] shadow-[0_10px_40px_rgba(0,102,255,0.15)] hover:shadow-[0_15px_50px_rgba(0,102,255,0.2)] transition-shadow duration-200 flex flex-col h-full">
+            <div className="bg-primary-50 p-6 sm:p-8 pt-8 sm:pt-12 pb-8 sm:pb-12 rounded-lg border-2 border-primary-500 shadow-[0_10px_40px_rgba(0,102,255,0.15)] hover:shadow-[0_15px_50px_rgba(0,102,255,0.2)] transition-shadow duration-200 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-2">PRO</h3>
               <p className="text-xl font-semibold text-[#6B46C1] mb-6">*Coming Soon™*</p>
 
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Everything in Free
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Advanced search
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Unlimited history
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   AI prompt optimization
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Priority support
                 </li>
               </ul>
@@ -670,7 +670,7 @@ const LandingPageClient = () => {
               <button
                 onClick={handleProWaitlist}
                 disabled={proWaitlistStatus === 'loading'}
-                className="w-full bg-white text-[var(--primary-500)] border-2 border-[var(--primary-500)] py-3 rounded-md font-semibold hover:bg-[var(--primary-500)] hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-white text-primary-500 border-2 border-primary-500 py-3 rounded-md font-semibold hover:bg-primary-500 hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {proWaitlistStatus === 'loading' ? (
                   <>
@@ -705,29 +705,29 @@ const LandingPageClient = () => {
             </div>
 
             {/* Team Tier */}
-            <div className="bg-white p-6 sm:p-8 rounded-lg border border-[var(--neutral-200)] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 flex flex-col h-full">
+            <div className="bg-white p-6 sm:p-8 rounded-lg border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] transition-shadow duration-200 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-2">TEAM</h3>
               <p className="text-xl font-semibold text-[#6B46C1] mb-6">*Coming Later*</p>
 
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Everything in Pro
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Shared workspaces
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Team analytics
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   Admin controls
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-[var(--primary-500)] mr-2 flex-shrink-0" size={16} />
+                  <CheckCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
                   SSO integration
                 </li>
               </ul>
@@ -735,7 +735,7 @@ const LandingPageClient = () => {
               <button
                 onClick={handleTeamWaitlist}
                 disabled={teamWaitlistStatus === 'loading'}
-                className="w-full bg-gray-100 text-[var(--neutral-500)] border border-gray-200 py-3 rounded-md font-semibold hover:bg-gray-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-gray-100 text-neutral-500 border border-gray-200 py-3 rounded-md font-semibold hover:bg-gray-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {teamWaitlistStatus === 'loading' ? (
                   <>
@@ -779,7 +779,7 @@ const LandingPageClient = () => {
             The Secret to Consistently Great AI Results
           </h2>
 
-          <p className="text-xl text-[var(--neutral-500)] mb-8">
+          <p className="text-xl text-neutral-500 mb-8">
             Great prompts aren't lucky accidents. They're engineered.
           </p>
 
@@ -787,25 +787,25 @@ const LandingPageClient = () => {
             href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-[var(--primary-500)] text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-[var(--primary-600)] shadow-sm hover:shadow-md transition-all duration-200"
+            className="inline-flex items-center bg-primary-500 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-primary-600 shadow-sm hover:shadow-md transition-all duration-200"
           >
             <Clock className="mr-2" size={20} />
             Get Prompt Theory
           </a>
 
-          <p className="mt-4 text-sm text-[var(--neutral-500)]">Start engineering better AI output</p>
+          <p className="mt-4 text-sm text-neutral-500">Start engineering better AI output</p>
 
           <div className="flex justify-center space-x-8 mt-8 text-sm">
             <div className="flex items-center">
-              <Lock className="text-[var(--primary-500)] mr-2" size={16} />
+              <Lock className="text-primary-500 mr-2" size={16} />
               Your data stays yours
             </div>
             <div className="flex items-center">
-              <CheckCircle className="text-[var(--primary-500)] mr-2" size={16} />
+              <CheckCircle className="text-primary-500 mr-2" size={16} />
               30-day money back
             </div>
             <div className="flex items-center">
-              <Zap className="text-[var(--primary-500)] mr-2" size={16} />
+              <Zap className="text-primary-500 mr-2" size={16} />
               Free tier forever
             </div>
           </div>
@@ -813,18 +813,18 @@ const LandingPageClient = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#FAFAFA] py-12 px-4 sm:px-6 lg:px-8 border-t border-[var(--neutral-200)]">
+      <footer className="bg-[#FAFAFA] py-12 px-4 sm:px-6 lg:px-8 border-t border-neutral-200">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-[var(--primary-500)] font-bold text-xl mb-4">Prompt Theory</h3>
-              <p className="text-[var(--neutral-500)] mb-4">
+              <h3 className="text-primary-500 font-bold text-xl mb-4">Prompt Theory</h3>
+              <p className="text-neutral-500 mb-4">
                 Professional prompt management for people who ship with AI.
               </p>
               <div className="flex space-x-4">
-                <Link href="/privacy" className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)]">Privacy Policy</Link>
-                <a href="#" className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)]">Terms</a>
-                <a href="#" className="text-[var(--neutral-500)] hover:text-[var(--neutral-900)]">Contact</a>
+                <Link href="/privacy" className="text-neutral-500 hover:text-neutral-900">Privacy Policy</Link>
+                <a href="#" className="text-neutral-500 hover:text-neutral-900">Terms</a>
+                <a href="#" className="text-neutral-500 hover:text-neutral-900">Contact</a>
               </div>
             </div>
 
@@ -838,12 +838,12 @@ const LandingPageClient = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@company.com"
                     disabled={waitlistStatus === 'loading' || waitlistStatus === 'success'}
-                    className="flex-1 bg-white border border-[var(--neutral-200)] rounded-md px-4 py-2 focus:outline-none focus:border-[var(--primary-500)] focus:ring-2 focus:ring-[var(--primary-500)]/20 transition-all duration-200 disabled:bg-gray-50 disabled:cursor-not-allowed min-w-0"
+                    className="flex-1 bg-white border border-neutral-200 rounded-md px-4 py-2 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 disabled:bg-gray-50 disabled:cursor-not-allowed min-w-0"
                   />
                   <button
                     type="submit"
                     disabled={waitlistStatus === 'loading' || waitlistStatus === 'success'}
-                    className="bg-[var(--primary-500)] text-white px-4 sm:px-6 py-2 rounded-md hover:bg-[var(--primary-600)] shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center whitespace-nowrap"
+                    className="bg-primary-500 text-white px-4 sm:px-6 py-2 rounded-md hover:bg-primary-600 shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center whitespace-nowrap"
                   >
                     {waitlistStatus === 'loading' ? (
                       <>
@@ -876,13 +876,13 @@ const LandingPageClient = () => {
                   </div>
                 )}
               </form>
-              <p className="text-sm text-[var(--neutral-500)] mt-2">
+              <p className="text-sm text-neutral-500 mt-2">
                 Early feature access. No spam. Unsubscribe anytime.
               </p>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-[var(--neutral-200)] text-center text-sm text-[var(--neutral-500)]">
+          <div className="mt-8 pt-8 border-t border-neutral-200 text-center text-sm text-neutral-500">
             © {new Date().getFullYear()} Prompt Theory. Built for builders, by builders.
           </div>
         </div>
