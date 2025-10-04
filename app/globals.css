@@ -42,6 +42,113 @@
   src: url('/fonts/jetbrains-mono-v24-latin-700.woff2') format('woff2');
 }
 
+:root {
+  /* Primary Colors - Aqua-Blue */
+  --primary-50: #BDEDFC;
+  --primary-100: #A8E8FB;
+  --primary-200: #93E2FA;
+  --primary-300: #50B4E6;
+  --primary-400: #3D9DD9;
+  --primary-500: #2C86C7;
+  --primary-600: #1F6DAD;
+  --primary-700: #165594;
+  --primary-800: #0E3D7A;
+  --primary-900: #062561;
+  --primary-500-rgb: 44, 134, 199;
+
+  /* Success Colors - Green */
+  --success-50: #C8FADF;
+  --success-100: #B8F8D5;
+  --success-200: #A7F6CB;
+  --success-300: #5AE0A2;
+  --success-400: #43D193;
+  --success-500: #30BF83;
+  --success-600: #24A676;
+  --success-700: #198C66;
+  --success-800: #0E7356;
+  --success-900: #035945;
+  --success-500-rgb: 48, 191, 131;
+
+  /* Warning Colors - Amber */
+  --warning-50: #FCEACA;
+  --warning-100: #FBDFB5;
+  --warning-200: #FAD4A0;
+  --warning-300: #EBB446;
+  --warning-400: #E0A931;
+  --warning-500: #C7941E;
+  --warning-600: #AD7F17;
+  --warning-700: #94700F;
+  --warning-800: #7A6108;
+  --warning-900: #615200;
+  --warning-500-rgb: 199, 148, 30;
+
+  /* Error Colors - Red */
+  --error-50: #FCCACA;
+  --error-100: #FBB5B5;
+  --error-200: #FAA0A0;
+  --error-300: #E65450;
+  --error-400: #D9473D;
+  --error-500: #BF3326;
+  --error-600: #A62A1C;
+  --error-700: #8C2113;
+  --error-800: #73180A;
+  --error-900: #590F01;
+  --error-500-rgb: 191, 51, 38;
+
+  /* Neutral Colors - Gray */
+  --neutral-50: #E8F4FC;
+  --neutral-100: #DFEDF7;
+  --neutral-200: #CEDFEB;
+  --neutral-300: #BFCED9;
+  --neutral-400: #A1ABB3;
+  --neutral-500: #81888C;
+  --neutral-600: #5C6266;
+  --neutral-700: #43494D;
+  --neutral-800: #2B3033;
+  --neutral-900: #15181A;
+
+  /* Shadows - Light Mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+  /* Background Colors */
+  --background: #FFFFFF;
+  --surface: var(--neutral-50);
+  --surface-hover: var(--neutral-100);
+}
+
+[data-theme="dark"],
+.dark-mode {
+  /* Primary Colors - Brighter for dark mode */
+  --primary-default: var(--primary-400);
+  --primary-hover: var(--primary-300);
+
+  /* Success Colors - Brighter for dark mode */
+  --success-default: var(--success-400);
+  --success-hover: var(--success-300);
+
+  /* Warning Colors - Brighter for dark mode */
+  --warning-default: var(--warning-400);
+  --warning-hover: var(--warning-300);
+
+  /* Error Colors - Brighter for dark mode */
+  --error-default: var(--error-400);
+  --error-hover: var(--error-300);
+
+  /* Shadows - Dark Mode (stronger) */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+
+  /* Background Colors */
+  --background: var(--neutral-900);
+  --surface: var(--neutral-800);
+  --surface-hover: var(--neutral-700);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -49,5 +156,7 @@
 
   body {
     font-family: 'JetBrains Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
