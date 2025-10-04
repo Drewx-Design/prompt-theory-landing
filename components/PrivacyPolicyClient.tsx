@@ -62,27 +62,27 @@ const PrivacyPolicyClient: React.FC = () => {
             <p className="text-sm text-[#6B7280] mt-2">Last updated: August 20, 2025</p>
           </div>
 
-          {/* How Prompt Theory Works */}
+          {/* How It Works */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">How Prompt Theory Works</h2>
+            <h2 className="text-2xl font-bold mb-6">How It Works</h2>
 
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
                 <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Local Storage (Default)</h3>
-                <p className="text-[#6B7280]">All your prompts, projects, and settings are stored locally in your browser. Sign in to sync across devices, or stay signed out for local-only storage.</p>
+                <p className="text-[#6B7280]">All prompts stored in your browser. Works completely offline. No account needed.</p>
               </div>
 
               <div className="bg-[#F0F7FF] p-6 rounded-lg border-2 border-[#0066FF]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Cloud Sync (When Logged In)</h3>
-                <p className="text-[#6B7280]">Sign in to automatically sync your prompts across devices. Your data is encrypted and stored on secure PostgreSQL servers hosted by Neon.</p>
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Cloud Sync (Optional)</h3>
+                <p className="text-[#6B7280]">Sign in to sync across devices. Your prompts and usage data sync to secure servers.</p>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
                 <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Account Options</h3>
                 <ul className="space-y-2 text-[#6B7280]">
-                  <li><strong className="text-[#1A1A1A]">No account needed</strong> - Full functionality with local storage only</li>
-                  <li><strong className="text-[#1A1A1A]">Google Sign-in</strong> - Automatic sync across devices</li>
-                  <li><strong className="text-[#1A1A1A]">Email Magic Links</strong> - Passwordless sync option</li>
+                  <li>• No account needed - Local storage only</li>
+                  <li>• Google Sign-in - Auto sync with usage data</li>
+                  <li>• Email magic links - Passwordless sync</li>
                 </ul>
               </div>
             </div>
@@ -93,58 +93,125 @@ const PrivacyPolicyClient: React.FC = () => {
             <h2 className="text-2xl font-bold mb-6">Chrome Permissions</h2>
 
             <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-              <p className="text-[#6B7280] mb-4">We request only what's needed to function:</p>
-              <ul className="space-y-2 text-[#6B7280]">
-                <li><strong className="text-[#1A1A1A]">Storage</strong> - Save your prompts locally</li>
-                <li><strong className="text-[#1A1A1A]">Clipboard</strong> - Copy prompts with one click</li>
-                <li><strong className="text-[#1A1A1A]">Active Tab</strong> - Insert prompts where you're working</li>
-                <li><strong className="text-[#1A1A1A]">Side Panel</strong> - Show the extension interface</li>
-              </ul>
+              <p className="text-[#6B7280] mb-4">We request minimal permissions:</p>
+              <div className="space-y-4 text-[#6B7280]">
+                <div>
+                  <p className="text-[#1A1A1A] font-semibold mb-1">🔑 "Read and change data on all websites"</p>
+                  <p className="ml-4">→ Detects Ctrl+Shift+Space on any site</p>
+                  <p className="ml-4">→ Shows your prompt library when you press it</p>
+                  <p className="ml-4">→ Alternative: Require manual clicks every time (defeats instant access)</p>
+                  <p className="ml-4">→ Never reads page content or browsing history</p>
+                </div>
+                <div>
+                  <p className="text-[#1A1A1A] font-semibold mb-1">📋 "Modify clipboard"</p>
+                  <p className="ml-4">→ Writes prompts to clipboard when you click them</p>
+                  <p className="ml-4">→ Never reads what you've copied from other sources</p>
+                </div>
+                <div>
+                  <p className="text-[#1A1A1A] font-semibold mb-1">🔔 "Display notifications"</p>
+                  <p className="ml-4">→ Optional sync status updates only</p>
+                </div>
+                <div>
+                  <p className="text-[#1A1A1A] font-semibold mb-1">💾 Storage & Side Panel</p>
+                  <p className="ml-4">→ Save prompts locally and show the UI</p>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* Data Handling */}
+          {/* What We Store */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Data Handling</h2>
+            <h2 className="text-2xl font-bold mb-6">What We Store</h2>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">What We Store</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Local Storage (Always):</h3>
                 <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Your prompts and projects</li>
-                  <li>• Organization structure (folders, tags)</li>
-                  <li>• UI preferences</li>
-                  <li>• Version history (last 10 versions)</li>
+                  <li>• Your prompts, projects, and collections</li>
+                  <li>• UI preferences (theme, hotkey, pinned prompts)</li>
+                  <li>• Local usage counts (how often you copy each prompt)</li>
+                  <li>• Version history</li>
                 </ul>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">How Sync Works</h3>
-                <p className="text-[#6B7280]">When you're logged in, your data syncs every 5 minutes or on-demand. Synced data includes everything stored locally plus timestamps for conflict resolution.</p>
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Cloud Storage (When Logged In):</h3>
+                <ul className="space-y-2 text-[#6B7280]">
+                  <li>• Everything from local storage</li>
+                  <li>• Your email address (for authentication)</li>
+                  <li>• Name and avatar (if using Google OAuth)</li>
+                  <li>• Sync timestamps and version numbers</li>
+                </ul>
               </div>
-            </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-              <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Backup & Recovery</h3>
-              <ul className="space-y-2 text-[#6B7280]">
-                <li><strong className="text-[#1A1A1A]">Local:</strong> Data persists until you delete it</li>
-                <li><strong className="text-[#1A1A1A]">Cloud:</strong> 30-day recovery window for deleted items</li>
-              </ul>
+              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Usage Data We Track:</h3>
+                <ul className="space-y-2 text-[#6B7280]">
+                  <li>• How many times you've copied each prompt (useCount)</li>
+                  <li>• When you last used each prompt (lastUsedAt)</li>
+                  <li>• How often you open the extension (quickAccessCount)</li>
+                  <li>• Sync events and frequency</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">What We Don't Track:</h3>
+                <ul className="space-y-2 text-[#6B7280]">
+                  <li>• Which websites you visit</li>
+                  <li>• What you type into AI tools</li>
+                  <li>• Your browsing history</li>
+                  <li>• Your clipboard contents</li>
+                  <li>• The actual content of your prompts</li>
+                </ul>
+              </div>
             </div>
           </section>
 
-          {/* Third-Party Services */}
+          {/* Analytics & Tracking */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Third-Party Services</h2>
+            <h2 className="text-2xl font-bold mb-6">Analytics & Tracking</h2>
 
-            <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-              <p className="text-[#6B7280] mb-4">We work with minimal external services (only when you're signed in):</p>
-              <ul className="space-y-2 text-[#6B7280]">
-                <li><strong className="text-[#1A1A1A]">Neon</strong> - Database hosting for synced data</li>
-                <li><strong className="text-[#1A1A1A]">Google OAuth</strong> - Authentication</li>
-                <li><strong className="text-[#1A1A1A]">Render.com</strong> - API hosting</li>
-              </ul>
-              <p className="text-[#1A1A1A] mt-4 font-semibold">No analytics. No ads. No tracking.</p>
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Extension Analytics:</h3>
+                <ul className="space-y-2 text-[#6B7280]">
+                  <li>• We use Chrome's built-in analytics to understand feature usage</li>
+                  <li>• This tracks interactions within the extension only</li>
+                  <li>• Helps us prioritize which features to build next</li>
+                  <li>• Cannot be disabled</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Usage Data (When Logged In):</h3>
+                <ul className="space-y-2 text-[#6B7280]">
+                  <li>• How often you copy each prompt (useCount)</li>
+                  <li>• When you last used each prompt (lastUsedAt)</li>
+                  <li>• How often you open the extension (quickAccessCount)</li>
+                  <li>• Sync events and frequency</li>
+                  <li>• Tied to your account email</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">What We Don't Collect:</h3>
+                <ul className="space-y-2 text-[#6B7280]">
+                  <li>• Websites you visit outside the extension</li>
+                  <li>• Content you type into AI tools</li>
+                  <li>• Browsing history</li>
+                  <li>• Clipboard contents</li>
+                  <li>• Prompt content in analytics (only usage counts)</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Your Rights:</h3>
+                <ul className="space-y-2 text-[#6B7280]">
+                  <li>• Work offline to avoid cloud tracking</li>
+                  <li>• Request data export: privacy@prompttheory.dev</li>
+                  <li>• Delete account to remove all cloud data</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -152,24 +219,13 @@ const PrivacyPolicyClient: React.FC = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6">Your Control</h2>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-[#F0F7FF] p-6 rounded-lg border-2 border-[#0066FF]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">You Can Always:</h3>
-                <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Delete specific prompts or everything</li>
-                  <li>• Work offline anytime</li>
-                  <li>• Sign out to use local-only mode</li>
-                  <li>• Close your account (90-day recovery window)</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-                <h3 className="text-xl font-semibold mb-3 text-[#DC2626]">We Never:</h3>
-                <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Share data with third parties</li>
-                  <li>• Track your usage patterns</li>
-                </ul>
-              </div>
+            <div className="bg-[#F0F7FF] p-6 rounded-lg border-2 border-[#0066FF]">
+              <p className="text-[#6B7280] mb-4">You can always:</p>
+              <ul className="space-y-2 text-[#6B7280]">
+                <li>• Delete specific prompts or everything</li>
+                <li>• Work offline (no cloud sync)</li>
+                <li>• Sign out for local-only mode</li>
+              </ul>
             </div>
           </section>
 
@@ -179,10 +235,24 @@ const PrivacyPolicyClient: React.FC = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
               <ul className="space-y-2 text-[#6B7280]">
-                <li>• HTTPS encryption for all transfers</li>
-                <li>• Secure authentication tokens</li>
-                <li>• Rate limiting on API requests</li>
+                <li>• End-to-end encryption for synced data (AES-GCM 256-bit)</li>
+                <li>• Secure authentication (no password storage)</li>
                 <li>• Regular security updates</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Third-Party Services */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Third-Party Services</h2>
+
+            <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
+              <p className="text-[#6B7280] mb-4">When signed in, we use:</p>
+              <ul className="space-y-2 text-[#6B7280]">
+                <li>• Neon - Database hosting</li>
+                <li>• Google OAuth - Authentication</li>
+                <li>• Render.com - API hosting</li>
+                <li>• Resend - Email delivery</li>
               </ul>
             </div>
           </section>
@@ -192,7 +262,7 @@ const PrivacyPolicyClient: React.FC = () => {
             <h2 className="text-2xl font-bold mb-6">Compliance</h2>
 
             <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-              <p className="text-[#6B7280]">We respect privacy regulations including GDPR and CCPA. Not intended for users under 13.</p>
+              <p className="text-[#6B7280]">Not intended for users under 13.</p>
             </div>
           </section>
 
@@ -201,7 +271,7 @@ const PrivacyPolicyClient: React.FC = () => {
             <h2 className="text-2xl font-bold mb-6">Updates</h2>
 
             <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-              <p className="text-[#6B7280]">We'll notify you through the extension if this policy changes significantly. Previous versions available on GitHub.</p>
+              <p className="text-[#6B7280]">We'll notify you if this policy changes. Previous versions on GitHub.</p>
             </div>
           </section>
 
@@ -222,7 +292,7 @@ const PrivacyPolicyClient: React.FC = () => {
           <section className="mb-12">
             <div className="bg-gradient-to-r from-[#0066FF]/10 to-[#6B46C1]/10 p-8 rounded-lg border-2 border-[#0066FF] shadow-[0_4px_6px_rgba(0,102,255,0.1)] text-center">
               <p className="text-[#1A1A1A] text-lg font-medium italic">
-                Prompt Theory is built on trust. We make money from subscriptions, not your data.
+                Prompt Theory makes money from subscriptions, not your data.
               </p>
             </div>
           </section>
