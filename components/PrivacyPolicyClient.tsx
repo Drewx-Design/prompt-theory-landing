@@ -74,14 +74,14 @@ const PrivacyPolicyClient: React.FC = () => {
 
               <div className="bg-[#F0F7FF] p-6 rounded-lg border-2 border-[#0066FF]">
                 <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Cloud Sync (Optional)</h3>
-                <p className="text-[#6B7280]">Sign in to sync across devices. Your prompts and usage data sync to secure servers.</p>
+                <p className="text-[#6B7280]">Sign in to sync across devices. Your prompts (including full content) sync to secure servers.</p>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
                 <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Account Options</h3>
                 <ul className="space-y-2 text-[#6B7280]">
                   <li>• No account needed - Local storage only</li>
-                  <li>• Google Sign-in - Auto sync with usage data</li>
+                  <li>• Google Sign-in - Auto sync</li>
                   <li>• Email magic links - Passwordless sync</li>
                 </ul>
               </div>
@@ -127,9 +127,10 @@ const PrivacyPolicyClient: React.FC = () => {
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
                 <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Local Storage (Always):</h3>
                 <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Your prompts, projects, and collections</li>
+                  <li>• Your prompts and their full content</li>
+                  <li>• Projects, collections, and tags</li>
                   <li>• UI preferences (theme, hotkey, pinned prompts)</li>
-                  <li>• Local usage counts (how often you copy each prompt)</li>
+                  <li>• Local usage counts</li>
                   <li>• Version history</li>
                 </ul>
               </div>
@@ -137,31 +138,12 @@ const PrivacyPolicyClient: React.FC = () => {
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
                 <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Cloud Storage (When Logged In):</h3>
                 <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Everything from local storage</li>
+                  <li>• Your prompts and their full content</li>
+                  <li>• Organization (projects, collections, tags)</li>
+                  <li>• Usage counts and timestamps</li>
                   <li>• Your email address (for authentication)</li>
                   <li>• Name and avatar (if using Google OAuth)</li>
-                  <li>• Sync timestamps and version numbers</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Usage Data We Track:</h3>
-                <ul className="space-y-2 text-[#6B7280]">
-                  <li>• How many times you've copied each prompt (useCount)</li>
-                  <li>• When you last used each prompt (lastUsedAt)</li>
-                  <li>• How often you open the extension (quickAccessCount)</li>
-                  <li>• Sync events and frequency</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">What We Don't Track:</h3>
-                <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Which websites you visit</li>
-                  <li>• What you type into AI tools</li>
-                  <li>• Your browsing history</li>
-                  <li>• Your clipboard contents</li>
-                  <li>• The actual content of your prompts</li>
+                  <li>• Sync metadata</li>
                 </ul>
               </div>
             </div>
@@ -192,24 +174,32 @@ const PrivacyPolicyClient: React.FC = () => {
                   <li>• Tied to your account email</li>
                 </ul>
               </div>
+            </div>
+          </section>
 
+          {/* Data Access */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Data Access</h2>
+
+            <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">What We Don't Collect:</h3>
+                <p className="text-[#6B7280] mb-4">When you enable cloud sync, your prompts are stored on our servers. As the service provider, we have technical access to this data for:</p>
                 <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Websites you visit outside the extension</li>
-                  <li>• Content you type into AI tools</li>
-                  <li>• Browsing history</li>
-                  <li>• Clipboard contents</li>
-                  <li>• Prompt content in analytics (only usage counts)</li>
+                  <li>• Backup and recovery</li>
+                  <li>• System maintenance</li>
+                  <li>• Legal compliance if required</li>
                 </ul>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06)] border border-[#E5E5E5]">
-                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">Your Rights:</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#0066FF]">What We Don't Do:</h3>
                 <ul className="space-y-2 text-[#6B7280]">
-                  <li>• Work offline to avoid cloud tracking</li>
-                  <li>• Request data export: privacy@prompttheory.dev</li>
-                  <li>• Delete account to remove all cloud data</li>
+                  <li>• Read your prompts for any other purpose</li>
+                  <li>• Use prompt content for training or analytics</li>
+                  <li>• Share prompt content with third parties</li>
+                  <li>• Track which websites you visit</li>
+                  <li>• Monitor your clipboard activity</li>
+                  <li>• Sell your data</li>
                 </ul>
               </div>
             </div>
@@ -225,6 +215,8 @@ const PrivacyPolicyClient: React.FC = () => {
                 <li>• Delete specific prompts or everything</li>
                 <li>• Work offline (no cloud sync)</li>
                 <li>• Sign out for local-only mode</li>
+                <li>• Request data export: privacy@prompttheory.dev</li>
+                <li>• Delete your account and all cloud data</li>
               </ul>
             </div>
           </section>
@@ -238,6 +230,7 @@ const PrivacyPolicyClient: React.FC = () => {
                 <li>• End-to-end encryption for synced data (AES-GCM 256-bit)</li>
                 <li>• Secure authentication (no password storage)</li>
                 <li>• Regular security updates</li>
+                <li>• Database encryption at rest</li>
               </ul>
             </div>
           </section>
