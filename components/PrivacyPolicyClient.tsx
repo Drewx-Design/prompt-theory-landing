@@ -96,11 +96,10 @@ const PrivacyPolicyClient: React.FC = () => {
               <p className="text-[#6B7280] mb-4">We request minimal permissions:</p>
               <div className="space-y-4 text-[#6B7280]">
                 <div>
-                  <p className="text-[#1A1A1A] font-semibold mb-1">🔑 "Read and change data on all websites"</p>
-                  <p className="ml-4">→ Detects Ctrl+Shift+Space on any site</p>
-                  <p className="ml-4">→ Shows your prompt library when you press it</p>
-                  <p className="ml-4">→ Alternative: Require manual clicks every time (defeats instant access)</p>
-                  <p className="ml-4">→ Never reads page content or browsing history</p>
+                  <p className="text-[#1A1A1A] font-semibold mb-2">🔑 "Read and change data on all websites"</p>
+                  <p className="ml-4 mb-2"><strong className="text-[#1A1A1A]">Why we need it:</strong> To detect Ctrl+Shift+Space and show your prompt library instantly on any site (ChatGPT, Claude, Notion, Docs, etc.)</p>
+                  <p className="ml-4 mb-2"><strong className="text-[#1A1A1A]">What it does:</strong> Listens for your hotkey. That's it.</p>
+                  <p className="ml-4"><strong className="text-[#1A1A1A]">What it doesn't do:</strong> Read page content, track browsing, or access your data on websites.</p>
                 </div>
                 <div>
                   <p className="text-[#1A1A1A] font-semibold mb-1">📋 "Modify clipboard"</p>
