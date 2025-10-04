@@ -218,6 +218,7 @@ const LandingPageClient = () => {
               <a href="#features" className="text-[#6B7280] hover:text-[#1A1A1A] transition">Features</a>
               <a href="#security" className="text-[#6B7280] hover:text-[#1A1A1A] transition">Security</a>
               <a href="#pricing" className="text-[#6B7280] hover:text-[#1A1A1A] transition">Pricing</a>
+              <Link href="/changelog" className="text-[#6B7280] hover:text-[#1A1A1A] transition">Changelog</Link>
               <a
                 href="https://chromewebstore.google.com/detail/prompt-theory/cckiiafaifdbfbookaiihfmfkceceoko"
                 target="_blank"
